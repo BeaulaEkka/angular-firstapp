@@ -10,4 +10,7 @@ import { RouterOutlet } from "@angular/router";
 export class AppComponent {
   title = "Beaulas first App";
   name = "Local";
+
+  x=4;
+  y=5;
 }
