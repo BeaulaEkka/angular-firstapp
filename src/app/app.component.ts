@@ -16,4 +16,8 @@ export class AppComponent {
 
   x = 4;
   y = 5;
+
+  handleClickEvent() {
+    alert("Button Clicked");
+  }
 }
