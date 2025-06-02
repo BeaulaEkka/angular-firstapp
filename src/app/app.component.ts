@@ -40,7 +40,17 @@ export class AppComponent {
   //   this.x = 0;
   // }
 
-  handleCounter(val:string){
-    if(val=="plus"){ this.x++;}else if(val=="minus"){ this.x--;}else{this.x=0;}
+  handleCounter(val: string) {
+    if (val == "plus") {
+      this.x++;
+    } else if (val == "minus") {
+      this.x--;
+    } else {
+      this.x = 0;
+    }
+  }
+
+  handleEvent(event: MouseEvent) {
+    console.log("function called ", event.type);
   }
 }
