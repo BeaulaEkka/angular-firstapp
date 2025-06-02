@@ -50,7 +50,8 @@ export class AppComponent {
     }
   }
 
-  handleEvent(event: MouseEvent) {
+  handleEvent(event: Event) {
     console.log("function called ", event.type);
+    console.log("value ", (event.target as HTMLInputElement).value);
   }
 }
