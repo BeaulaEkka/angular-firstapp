@@ -19,5 +19,10 @@ export class AppComponent {
 
   handleClickEvent() {
     alert("Button Clicked");
+    this.otherFunction();
+  }
+
+  otherFunction() {
+    alert("Other Function");
   }
 }
