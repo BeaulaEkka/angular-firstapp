@@ -8,4 +8,15 @@
 
 <button type="button" (click)="handleClickEvent()">Click Me</button>
 <button type="button" (click)="sum(20,21)">Sum</button>
-<p></p>
+<h1>Counting App</h1>
+<div class="increment_container_main">
+
+
+<h1>{{x}}</h1>
+<div class="increment_container">
+
+    <button class="btn btn_increment" type="button" (click)="handleCounter('plus')">Increment</button>
+
+    <button class="btn btn_reset" type="button" (click)="handleCounter('reset')">Reset</button>
+    <button class="btn btn_decrement" type="button" (click)="handleCounter('minus')">Decrement</button>
+</div></div>

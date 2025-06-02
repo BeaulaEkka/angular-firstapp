@@ -13,9 +13,8 @@ import { ProfileComponent } from "./profile/profile.component";
 export class AppComponent {
   title = "Beaulas first App";
   name = "Local";
-
-  x = 4;
-  y = 5;
+  x: number = 0;
+  y: number = 0;
 
   handleClickEvent() {
     alert("Button Clicked");
@@ -28,5 +27,20 @@ export class AppComponent {
 
   sum(a: number, b: number) {
     console.log(a + b);
+  }
+
+  // increment() {
+  //   this.x++;
+  // }
+  // decrement() {
+  //   this.x--;
+  // }
+
+  // reset() {
+  //   this.x = 0;
+  // }
+
+  handleCounter(val:string){
+    if(val=="plus"){ this.x++;}else if(val=="minus"){ this.x--;}else{this.x=0;}
   }
 }
