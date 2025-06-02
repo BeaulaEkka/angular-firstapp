@@ -25,4 +25,8 @@ export class AppComponent {
   otherFunction() {
     alert("Other Function");
   }
+
+  sum(a: number, b: number) {
+    console.log(a + b);
+  }
 }
