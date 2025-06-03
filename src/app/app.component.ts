@@ -57,6 +57,7 @@ export class AppComponent {
 
   name1: string = "";
   displayName: string = "";
+  email: string = "";
 
   getName(event: Event) {
     console.log("event ", event);
@@ -70,5 +71,9 @@ export class AppComponent {
 
   setName() {
     this.name1 = "sam";
+  }
+  getEmail(val: string) {
+    console.log("email", val);
+    this.email = val;
   }
 }
