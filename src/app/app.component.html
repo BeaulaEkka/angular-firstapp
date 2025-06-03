@@ -31,3 +31,15 @@
 
 <br/>
 <input type="text" name="user" (input)="handleEvent($event)">
+<br/>
+
+<h1>Get and Set Input Values</h1>
+<input type="text" placeholder="Enter your User Name" (input)="getName($event)" value="{{name1}}">
+
+<br/>
+
+
+<h1>The user name is {{displayName}}</h1>
+<button (click)="showName()">Get Name</button>
+<br/>
+<button (click)="setName()">Set Name</button>

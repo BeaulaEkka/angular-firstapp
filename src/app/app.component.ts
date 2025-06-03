@@ -54,4 +54,21 @@ export class AppComponent {
     console.log("function called ", event.type);
     console.log("value ", (event.target as HTMLInputElement).value);
   }
+
+  name1: string = "";
+  displayName: string = "";
+
+  getName(event: Event) {
+    console.log("event ", event);
+    const val = (event.target as HTMLInputElement).value;
+
+    this.name1 = val;
+  }
+  showName() {
+    this.displayName = this.name1;
+  }
+
+  setName() {
+    this.name1 = "sam";
+  }
 }
