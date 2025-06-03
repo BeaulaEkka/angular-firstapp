@@ -58,6 +58,7 @@ export class AppComponent {
   name1: string = "";
   displayName: string = "";
   email: string = "";
+  display = true;
 
   getName(event: Event) {
     console.log("event ", event);
@@ -78,5 +79,9 @@ export class AppComponent {
   }
   setEmail() {
     this.email = "default@gmail.com";
+  }
+
+  hide() {
+    this.display = !this.display;
   }
 }
