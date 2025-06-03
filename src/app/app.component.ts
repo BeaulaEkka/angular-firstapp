@@ -76,4 +76,7 @@ export class AppComponent {
     console.log("email", val);
     this.email = val;
   }
+  setEmail() {
+    this.email = "default@gmail.com";
+  }
 }

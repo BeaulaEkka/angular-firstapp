@@ -45,7 +45,7 @@
 <button (click)="setName()">Set Name</button>
 <hr>
 <h1>Email:{{email}}</h1>
-<input type="text" placeholder="enter email" #emailField>
-<button (click)="getEmail(emailField.value)">get Email</button>
-<button>set Email</button>
+<input type="text" placeholder="enter email" #emailField value="{{email}}">
+<button type="button" (click)="getEmail(emailField.value)">get Email</button>
+<button type="button" (click)="setEmail()">set Email</button>
 
