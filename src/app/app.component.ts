@@ -59,6 +59,7 @@ export class AppComponent {
   displayName: string = "";
   email: string = "";
   display = true;
+  toggleDiv = true;
 
   getName(event: Event) {
     console.log("event ", event);
@@ -83,5 +84,9 @@ export class AppComponent {
 
   hide() {
     this.display = !this.display;
+  }
+
+  toggleTwo() {
+    this.toggleDiv = !this.toggleDiv;
   }
 }

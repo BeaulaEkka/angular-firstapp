@@ -77,3 +77,15 @@ h1{
 <br>
 <br>
 <br>
+<h1>Toggle Two divs</h1>
+<button type="button" (click)="toggleTwo()">Toggle two Divs</button>
+@if(toggleDiv){
+  <div style="background-color:gold;width: 200px;height: 200px;">
+
+  </div>
+}
+@else {
+  <div style="background-color: red;width: 200px;height: 200px;">
+
+  </div>
+}
