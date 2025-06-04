@@ -93,6 +93,13 @@ h1{
 <hr>
 
 <h1>Else if | Control Flow</h1>
+<button (click)="handleColor(1)">Red</button>
+<button (click)="handleColor(2)">Green</button>
+<button (click)="handleColor(3)">Yellow</button>
+<button (click)="handleColor(4)">Pink</button>
+
+<input placeholder="Input Color number"type="text" (input)="handleColorInput($event)">
+
 @if(color==1){<div style="background-color:red; width: 100px; height: 100px;"></div>
 
 }@else if(color==2){<div style="background-color:rgb(11, 179, 53); width: 100px; height: 100px;"></div>}

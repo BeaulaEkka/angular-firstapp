@@ -91,4 +91,12 @@ export class AppComponent {
   toggleTwo() {
     this.toggleDiv = !this.toggleDiv;
   }
+
+  handleColor(val: number) {
+    this.color = val;
+  }
+
+  handleColorInput(event: Event) {
+    this.color = parseInt((event.target as HTMLInputElement).value);
+  }
 }
