@@ -93,8 +93,11 @@ h1{
 <hr>
 
 <h1>Else if | Control Flow</h1>
-<div style="background-color:red; width: 100px; height: 100px;"></div>
-<div style="background-color:rgb(11, 179, 53); width: 100px; height: 100px;"></div><div style="background-color:rgb(12, 214, 245); width: 100px; height: 100px;"></div><div style="background-color:rgb(251, 217, 29); width: 100px; height: 100px;"></div>
+@if(color==1){<div style="background-color:red; width: 100px; height: 100px;"></div>
+
+}@else if(color==2){<div style="background-color:rgb(11, 179, 53); width: 100px; height: 100px;"></div>}
+@else if(color==3){<div style="background-color:rgb(255, 255, 0); width: 100px; height: 100px;"></div>}
+@else{<div style="background-color:rgb(238, 18, 168); width: 100px; height: 100px;"></div>}
 
 
 

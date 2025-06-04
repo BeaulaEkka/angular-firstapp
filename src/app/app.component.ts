@@ -61,6 +61,8 @@ export class AppComponent {
   display = true;
   toggleDiv = true;
 
+  color = 100;
+
   getName(event: Event) {
     console.log("event ", event);
     const val = (event.target as HTMLInputElement).value;
