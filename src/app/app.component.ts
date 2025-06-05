@@ -63,10 +63,16 @@ export class AppComponent {
   color = 100;
   switchcolor = "yellow";
   users = [
-    { name: "sam", age: 20 },
-    { name: "john", age: 25 },
-    { name: "peter", age: 30 },
-    { name: "jane", age: 35 },
+    "john",
+    "jane",
+    "mary",
+    "peter",
+    "sam",
+    "james",
+    "rachel",
+    "ron",
+    "lisa",
+    "mike",
   ];
 
   getName(event: Event) {
