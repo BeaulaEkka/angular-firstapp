@@ -62,6 +62,12 @@ export class AppComponent {
   toggleDiv = true;
   color = 100;
   switchcolor = "yellow";
+  users = [
+    { name: "sam", age: 20 },
+    { name: "john", age: 25 },
+    { name: "peter", age: 30 },
+    { name: "jane", age: 35 },
+  ];
 
   getName(event: Event) {
     console.log("event ", event);
