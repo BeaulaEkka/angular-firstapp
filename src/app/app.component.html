@@ -118,6 +118,7 @@ h1{
 <button type="button" (click)="handleSwitchColor('green')">Green</button>
 <button type="button" (click)="handleSwitchColor('blue')">Blue</button>
 <button type="button" (click)="handleSwitchColor('yellow')">Yellow</button>
+<button type="button" (click)="handleSwitchColor('pink')">Gold</button>
 
 @switch(switchcolor){
   @case('red'){
@@ -131,6 +132,9 @@ h1{
   }
   @case('yellow'){
     <h1 style="background-color: yellow; color: black;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
+  }
+  @default(){
+    <h1 style="background-color: black; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">No Color Match</h1>
   }
 }
 
