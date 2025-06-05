@@ -60,8 +60,8 @@ export class AppComponent {
   email: string = "";
   display = true;
   toggleDiv = true;
-
   color = 100;
+  switchcolor = "yellow";
 
   getName(event: Event) {
     console.log("event ", event);
