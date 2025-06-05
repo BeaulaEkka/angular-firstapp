@@ -103,4 +103,8 @@ export class AppComponent {
   handleSwitchColor(val: string) {
     this.switchcolor = val;
   }
+
+  handleSwitchColorChange(event: Event) {
+    this.switchcolor = (event.target as HTMLInputElement).value;
+  }
 }

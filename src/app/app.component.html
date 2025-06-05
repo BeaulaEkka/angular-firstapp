@@ -119,6 +119,7 @@ h1{
 <button type="button" (click)="handleSwitchColor('blue')">Blue</button>
 <button type="button" (click)="handleSwitchColor('yellow')">Yellow</button>
 <button type="button" (click)="handleSwitchColor('pink')">Gold</button>
+<input placeholder="enter color" type="text"(input)="handleSwitchColorChange($event)">
 
 @switch(switchcolor){
   @case('red'){
