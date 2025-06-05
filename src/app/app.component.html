@@ -114,19 +114,23 @@ h1{
 <br>
 <hr>
 <h1>SWITCH Case</h1>
+<button type="button" (click)="handleSwitchColor('red')">Red</button>
+<button type="button" (click)="handleSwitchColor('green')">Green</button>
+<button type="button" (click)="handleSwitchColor('blue')">Blue</button>
+<button type="button" (click)="handleSwitchColor('yellow')">Yellow</button>
 
 @switch(switchcolor){
   @case('red'){
-    <h1 style="background-color: red; color: white;padding: 5px;border-radius: 10px;">Red Color</h1>
+    <h1 style="background-color: red; color: white;padding: 5px;border-radius: 10px; text-transform: capitalize">{{switchcolor}}</h1>
   }
   @case('green'){
-    <h1 style="background-color: green; color: white;padding: 5px;border-radius: 10px;">{{switchcolor}}</h1>
+    <h1 style="background-color: green; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
   }
   @case('blue'){
-    <h1 style="background-color: blue; color: white;padding: 5px;border-radius: 10px;">{{switchcolor}}</h1>
+    <h1 style="background-color: blue; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
   }
   @case('yellow'){
-    <h1 style="background-color: yellow; color: black;padding: 5px;border-radius: 10px;">{{switchcolor}}</h1>
+    <h1 style="background-color: yellow; color: black;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
   }
 }
 
