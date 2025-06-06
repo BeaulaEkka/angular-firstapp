@@ -129,7 +129,7 @@ export class AppComponent {
     this.switchcolor = (event.target as HTMLInputElement).value;
   }
 
-  getName(name: string) {
+  getStudentName(name: string) {
     console.log("name", name);
   }
 }
