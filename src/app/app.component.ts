@@ -128,4 +128,8 @@ export class AppComponent {
   handleSwitchColorChange(event: Event) {
     this.switchcolor = (event.target as HTMLInputElement).value;
   }
+
+  getName(name: string) {
+    console.log("name", name);
+  }
 }

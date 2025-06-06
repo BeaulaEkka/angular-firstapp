@@ -151,6 +151,7 @@ h1{
 <h2>Students</h2>
 @for(student of students;track student.name){
   <div>
+    <button type="button" (click)="getName(student.name)">Get Name</button>
   <h3>Name:{{student.name}}</h3>
   <p>Age: {{student.age}}</p>
   <p>email: {{student.email}}</p>
