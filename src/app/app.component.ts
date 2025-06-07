@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -83,6 +83,12 @@ export class AppComponent {
     { name: "james", age: 25, email: "james@gmail.com" },
     { name: "rachel", age: 26, email: "rachel@gmail.com" },
   ];
+  count = signal(10);
+  a=20;
+
+
+
+
 
   getName(event: Event) {
     console.log("event ", event);

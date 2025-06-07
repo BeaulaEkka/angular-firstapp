@@ -36,7 +36,7 @@ h1{
 <br/>
 
 <br/>
-<input type="text" name="user" (input)="handleEvent($event)">
+<input type="text" name="user" (input)="handleEvent($event)" placeholder="Enter Your Name" value="{{name}}">
 <br/>
 
 <h1>Get and Set Input Values</h1>
@@ -168,3 +168,13 @@ h1{
 <hr>
 <h1>Signals</h1>
 <p>Signals are reactive</p>
+<h3>Value of A:</h3>
+<h2>{{a}}</h2>
+<h1>{{count()}}</h1>
+<button type="button" (click)="count.set(100)">Increase Signal</button>
+<button type="button" (click)="count.set(100)">Increase Property</button>
+
+
+
+
+<br>  <br>  <br>  <br>  <br>  <br>  <br>
