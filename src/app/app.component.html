@@ -169,10 +169,12 @@ h1{
 <h1>Signals</h1>
 <p>Signals are reactive</p>
 <h3>Value of A:</h3>
-<h2>{{a}}</h2>
+
+<button type="button" (click)="count.set(count()-1)">Decrement</button>
 <h1>{{count()}}</h1>
-<button type="button" (click)="count.set(100)">Increase Signal</button>
-<button type="button" (click)="count.set(100)">Increase Property</button>
+<button type="button" (click)="count.set(count()+1)">Increment</button>
+
+
 
 
 
