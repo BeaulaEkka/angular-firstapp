@@ -1,4 +1,4 @@
-import { Component, effect, signal } from "@angular/core";
+import { Component, effect, signal, WritableSignal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -90,6 +90,11 @@ export class AppComponent {
     effect(() => {
       console.log("count ", this.count());
     });
+  }
+
+  data: WritableSignal<number | string> = signal<number | string>(10);
+  updateSignal() {
+    this.data.set("hello");
   }
 
   getName(event: Event) {
