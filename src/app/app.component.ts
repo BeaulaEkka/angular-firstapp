@@ -1,4 +1,4 @@
-import { Component, signal } from "@angular/core";
+import { Component, effect, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -84,11 +84,13 @@ export class AppComponent {
     { name: "rachel", age: 26, email: "rachel@gmail.com" },
   ];
   count = signal(10);
-  a=20;
+  a = 20;
 
-
-
-
+  constructor() {
+    effect(() => {
+      console.log("count ", this.count());
+    });
+  }
 
   getName(event: Event) {
     console.log("event ", event);
