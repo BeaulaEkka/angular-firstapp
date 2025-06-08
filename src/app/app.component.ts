@@ -95,6 +95,7 @@ export class AppComponent {
 
   s = 10;
   t = 20;
+  z = this.s + this.t;
 
   constructor() {
     effect(() => {
