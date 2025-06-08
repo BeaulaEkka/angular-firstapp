@@ -116,6 +116,11 @@ export class AppComponent {
     this.data.update((val) => val + 1);
   }
 
+  // computed signal
+  showValue() {
+    console.log("computed value ", this.z);
+  }
+
   getName(event: Event) {
     console.log("event ", event);
     const val = (event.target as HTMLInputElement).value;
