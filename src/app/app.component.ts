@@ -93,6 +93,9 @@ export class AppComponent {
   count = signal(10);
   a = 20;
 
+  s = 10;
+  t = 20;
+
   constructor() {
     effect(() => {
       console.log("count ", this.count());
