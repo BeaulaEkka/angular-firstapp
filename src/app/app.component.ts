@@ -1,4 +1,11 @@
-import { Component, effect, signal, WritableSignal } from "@angular/core";
+import {
+  Component,
+  computed,
+  effect,
+  Signal,
+  signal,
+  WritableSignal,
+} from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
@@ -83,7 +90,7 @@ export class AppComponent {
     { name: "james", age: 25, email: "james@gmail.com" },
     { name: "rachel", age: 26, email: "rachel@gmail.com" },
   ];
-  count = signal(10);
+  // count = signal(10);
   a = 20;
 
   constructor() {
@@ -92,7 +99,14 @@ export class AppComponent {
     });
   }
 
+  //coumputed sgnals and writable signals
+  // computed signals are used to derive values from other signals
+  // writable signals are used to create signals that can be updated
+  // signals are reactive and will update the view automatically when their value changes
+
   data: WritableSignal<number | string> = signal<number | string>(10);
+  count: Signal<Number> = computed(() => 200);
+
   updateSignal() {
     this.data.set("hello");
   }
