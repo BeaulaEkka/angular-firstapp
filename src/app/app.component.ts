@@ -93,9 +93,9 @@ export class AppComponent {
   count = signal(10);
   a = 20;
 
-  s = 10;
-  t = 20;
-  z = this.s + this.t;
+  s = signal(10);
+  t = signal(20);
+  z = computed(() => this.s() + this.t());
 
   constructor() {
     effect(() => {
@@ -118,9 +118,13 @@ export class AppComponent {
 
   // computed signal
   showValue() {
-    console.log("computed value ", this.z);
-    this.x = 100;
-    console.log("after change", this.z);
+    console.log("computed value ", this.z());
+    this.t.set(100);
+    console.log("after change", this.z());
+  }
+
+  updateX() {
+    this.t.set(200);
   }
 
   getName(event: Event) {
