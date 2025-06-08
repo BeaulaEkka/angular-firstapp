@@ -13,7 +13,7 @@ import { ProfileComponent } from "./profile/profile.component";
 
 @Component({
   selector: "app-root",
-  imports: [LoginComponent, SignupComponent, ProfileComponent, RouterOutlet],
+  imports: [LoginComponent, SignupComponent, ProfileComponent],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
@@ -90,7 +90,7 @@ export class AppComponent {
     { name: "james", age: 25, email: "james@gmail.com" },
     { name: "rachel", age: 26, email: "rachel@gmail.com" },
   ];
-  // count = signal(10);
+  count = signal(10);
   a = 20;
 
   constructor() {
@@ -104,11 +104,12 @@ export class AppComponent {
   // writable signals are used to create signals that can be updated
   // signals are reactive and will update the view automatically when their value changes
 
-  data: WritableSignal<number | string> = signal<number | string>(10);
-  count: Signal<Number> = computed(() => 200);
+  data: WritableSignal<number> = signal<number>(10);
+  // count: Signal<Number> = computed(() => 200);
 
   updateSignal() {
-    this.data.set("hello");
+    // this.data.set("hello");
+    this.data.update((val) => val + 1);
   }
 
   getName(event: Event) {
