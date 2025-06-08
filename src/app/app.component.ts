@@ -119,6 +119,8 @@ export class AppComponent {
   // computed signal
   showValue() {
     console.log("computed value ", this.z);
+    this.x = 100;
+    console.log("after change", this.z);
   }
 
   getName(event: Event) {
