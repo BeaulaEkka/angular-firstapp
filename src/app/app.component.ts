@@ -97,9 +97,13 @@ export class AppComponent {
   t = signal(20);
   z = computed(() => this.s() + this.t());
 
+  //effect
+  userName = signal("John Doe");
+
   constructor() {
     effect(() => {
       console.log("count ", this.count());
+      console.log("effect called ", this.userName());
     });
   }
 
