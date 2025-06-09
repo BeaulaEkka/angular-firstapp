@@ -99,12 +99,17 @@ export class AppComponent {
 
   //effect
   userName = signal("John Doe");
-  displayHeading = true;
+  displayHeading = false;
 
   constructor() {
     effect(() => {
       console.log("count ", this.count());
       console.log("effect called ", this.userName());
+      if (this.count() == 2) {
+        this.displayHeading = true;
+      } else {
+        this.displayHeading = false;
+      }
     });
   }
 
@@ -183,5 +188,14 @@ export class AppComponent {
 
   getStudentName(name: string) {
     console.log("name", name);
+  }
+
+  startCounting() {
+    {
+      this.count.set(this.count() + 1);
+    }
+  }
+  startSubtracting() {
+    this.count.set(this.count() - 1);
   }
 }

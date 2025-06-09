@@ -197,10 +197,17 @@ h1{
 <hr>
 <h1>Effect in Angular</h1>
 <h1>{{userName()}}</h1>
+<h1>{{count()}}</h1>
+<button (click)="startCounting()">Start counting</button>
+<button (click)="startSubtracting()">subtract counting</button>
 
 <button (click)="userName.set('Sam')">update user name</button>
 <button (click)="toggleValue()">display Heading</button>
 
 @if(displayHeading){<h1 style="background-color:green;padding: 5px;">Page heading</h1>}
+
+<br><br><br><br><br><br><br>
+<hr>
+
 
 
