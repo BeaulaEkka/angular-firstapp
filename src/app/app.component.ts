@@ -99,12 +99,17 @@ export class AppComponent {
 
   //effect
   userName = signal("John Doe");
+  displayHeading = true;
 
   constructor() {
     effect(() => {
       console.log("count ", this.count());
       console.log("effect called ", this.userName());
     });
+  }
+
+  toggleValue() {
+    this.displayHeading = !this.displayHeading;
   }
 
   //coumputed sgnals and writable signals
