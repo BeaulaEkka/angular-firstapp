@@ -210,5 +210,20 @@ h1{
 <hr>
 <h1>For Loop Contextual Variables</h1>
 
+@for(user of users;track user;let i=$index){
+  <!-- @if($first ||$last){
+    <h1 style="color:blue;">{{user}}</h1>
+  }@else{
+    <h1 style="color:red;">{{user}}</h1>
+  } -->
+@if($odd){
+  <h1 style="color:blue;">{{user}}</h1>
+}@else{
+  <h1 style="color:red;">{{user}}</h1>
+}
+}
 
+
+<hr>
+<h1>Two Way binding</h1>
 <br><br><br><br><br><br><br>
