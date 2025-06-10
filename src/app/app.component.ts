@@ -98,6 +98,18 @@ export class AppComponent {
   t = signal(20);
   z = computed(() => this.s() + this.t());
 
+  //todo list
+  task = "";
+  taskList: { id: number; task: string }[] = [];
+  addTask() {
+    this.taskList.push({ id: this.taskList.length + 1, task: this.task });
+    this.task = "";
+  }
+
+  deleteTask(id: number) {
+    this.taskList = this.taskList.filter((task) => task.id !== id);
+  }
+
   //effect
   userName = signal("John Doe");
   displayHeading = false;
