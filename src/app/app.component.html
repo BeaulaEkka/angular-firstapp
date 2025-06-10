@@ -226,4 +226,13 @@ h1{
 
 <hr>
 <h1>Two Way binding</h1>
+<!--htmlfile + ts file ... property sync--->
+<!-- <input [(ngModel)]="nameBinding" type="text" placeholder="Enter your name"> -->
+
+<input type="text" (input)="changeName($event)" placeholder="Enter your name">
+
+
+<!-- <h1>{{nameBinding}}</h1> -->
+<h1>{{nameBinding}}</h1>
 <br><br><br><br><br><br><br>
+

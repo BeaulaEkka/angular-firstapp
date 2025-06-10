@@ -10,10 +10,11 @@ import { RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-root",
-  imports: [LoginComponent, SignupComponent, ProfileComponent],
+  imports: [LoginComponent, SignupComponent, ProfileComponent, FormsModule],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
@@ -139,6 +140,14 @@ export class AppComponent {
 
   updateX() {
     this.t.set(200);
+  }
+
+  // event binding
+  nameBinding = "Beaula";
+
+  changeName(event: Event) {
+    const val = (event.target as HTMLInputElement).value;
+    this.nameBinding = val;
   }
 
   getName(event: Event) {
