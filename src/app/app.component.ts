@@ -106,8 +106,8 @@ export class AppComponent {
     this.task = "";
   }
 
-  deleteTask(id: number) {
-    this.taskList = this.taskList.filter((task) => task.id !== id);
+  deleteTask(taskId: number) {
+    this.taskList = this.taskList.filter((task) => task.id !== taskId);
   }
 
   //effect
