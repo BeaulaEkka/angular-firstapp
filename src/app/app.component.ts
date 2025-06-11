@@ -245,6 +245,6 @@ export class AppComponent {
 
   //ngFor
   studentList = [
-    " john, jane, mary, peter, sam, james, rachel, ron, lisa, mike",
+    "john, jane, mary, peter, sam, james, rachel, ron, lisa, mike",
   ];
 }
