@@ -11,7 +11,7 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { FormsModule } from "@angular/forms";
-import { NgIf } from "@angular/common";
+import { NgIf, NgFor } from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -21,6 +21,7 @@ import { NgIf } from "@angular/common";
     ProfileComponent,
     FormsModule,
     NgIf,
+    NgFor,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
@@ -241,4 +242,9 @@ export class AppComponent {
 
   //Directives
   showHide = false;
+
+  //ngFor
+  studentList = [
+    " john, jane, mary, peter, sam, james, rachel, ron, lisa, mike",
+  ];
 }
