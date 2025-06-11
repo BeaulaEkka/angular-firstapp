@@ -11,10 +11,17 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { FormsModule } from "@angular/forms";
+import { NgIf } from "@angular/common";
 
 @Component({
   selector: "app-root",
-  imports: [LoginComponent, SignupComponent, ProfileComponent, FormsModule],
+  imports: [
+    LoginComponent,
+    SignupComponent,
+    ProfileComponent,
+    FormsModule,
+    NgIf,
+  ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
@@ -231,4 +238,7 @@ export class AppComponent {
   startSubtracting() {
     this.count.set(this.count() - 1);
   }
+
+  //Directives
+  showHide = false;
 }
