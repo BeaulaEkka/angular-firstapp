@@ -100,6 +100,7 @@ export class AppComponent {
 
   //todo list
   task = "";
+  zoom = true;
   taskList: { id: number; task: string }[] = [];
   addTask() {
     this.taskList.push({ id: this.taskList.length + 1, task: this.task });
@@ -126,8 +127,19 @@ export class AppComponent {
     });
   }
 
+  //dynamic styling
+  redColor = "blue";
+  fontSize = "80";
+  fontWeight = "bold";
+  headingSize = "40px";
+  headingSizeBig = "80px";
+
   toggleValue() {
     this.displayHeading = !this.displayHeading;
+  }
+
+  updateHeadingSize() {
+    this.zoom = !this.zoom;
   }
 
   //coumputed sgnals and writable signals

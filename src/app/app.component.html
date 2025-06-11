@@ -241,5 +241,17 @@ h1{
 @for(task of taskList;track task){
   <h1 style="text-transform: capitalize;">{{task.id}}. {{task.task}} <button type="button" (click)="deleteTask(task.id)">Delete</button></h1>
 }
+<hr>
+<h1 [style.backgroundColor]="redColor" [style.fontSize.pt]="fontSize">Dynamic styling</h1>
+when styling value comes from property value. eg.theme
+
+<h1 [style.fontSize]="zoom ? headingSizeBig : headingSize">Heading</h1>
+<button type="button"(click)="updateHeadingSize()">Toggle Font</button>
+
+<hr>
+<h1>Directives in Angular</h1>
+<p>Directive is a class that adds additonal behaviour to elements in your application</p>
+
+
 <br><br><br><br><br><br><br>
 
