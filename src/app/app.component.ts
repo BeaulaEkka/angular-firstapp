@@ -11,7 +11,7 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { FormsModule } from "@angular/forms";
-import { NgIf, NgFor } from "@angular/common";
+import { NgIf, NgFor, NgSwitchCase, NgSwitch } from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -22,6 +22,8 @@ import { NgIf, NgFor } from "@angular/common";
     FormsModule,
     NgIf,
     NgFor,
+    NgSwitch,
+    NgSwitchCase,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
@@ -259,8 +261,20 @@ export class AppComponent {
     { name: "ron", age: 27, email: "ron@gmail.com" },
     { name: "lisa", age: 28, email: "lisa@gmail.com" },
   ];
-  
+
   //ngIf
   showNgIf = true;
-  login = true;
+  login = false;
+  block = 0;
+
+  updateblockHeading() {
+    this.block++;
+  }
+
+  //ngSwitch
+  colorSwitch = "pink";
+
+  changeColor(val: string) {
+    this.colorSwitch = val;
+  }
 }

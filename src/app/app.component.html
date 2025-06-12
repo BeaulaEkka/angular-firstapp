@@ -273,9 +273,10 @@ when styling value comes from property value. eg.theme
 <hr>
 <h1>*ngIf Directive in Angular</h1>
 <p>ngIf is used to conditionally include or exclude a block of HTML from the DOM</p>
+<h2 *ngIf="showNgIf">Heading NGIF</h2>
 <h2>This is true</h2>
 
-<h1 *ngIf="showNgIf">Heading NGIF</h1>
+
 
  <div *ngIf="login;else elseBlock">
 <a>Log Out</a>
@@ -284,6 +285,35 @@ when styling value comes from property value. eg.theme
  <ng-template #elseBlock>
   <a >Log Out</a>
 </ng-template>
+
+<div *ngIf="block==0">
+  <h1>Heading 1</h1>
+
+</div>
+<div *ngIf="block==1">
+  <h1>Heading 2</h1>
+</div>
+
+<button (click)="updateblockHeading()">updateBlock</button>
+<hr>
+<h1>ngSwitch Directive in Angular</h1>
+<p>ngSwitch is used to conditionally include or exclude a block of HTML based on a specific expression</p>
+
+<div [ngSwitch]="colorSwitch">
+<h2 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h2>
+<h2   *ngSwitchCase="'green'" style="background-color: green;">Green Color</h2>
+<h2 *ngSwitchCase="'blue'" style="background-color: blue;">Blue Color</h2>
+<h2 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h2>
+<h2 *ngSwitchCase="'pink'" style="background-color: hotpink;">Pink Color</h2>
+
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('pink')">Pink</button>
+</div>
+
+
 
 <br><br><br><br><br><br><br>
 
