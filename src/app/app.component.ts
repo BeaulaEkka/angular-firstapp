@@ -274,7 +274,7 @@ export class AppComponent {
   }
 
   //ngSwitch
-  colorSwitch = "pink";
+  colorSwitch = "black";
 
   changeColor(val: string) {
     this.colorSwitch = val;
