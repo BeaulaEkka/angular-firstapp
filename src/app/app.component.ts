@@ -11,7 +11,13 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { FormsModule } from "@angular/forms";
-import { NgIf, NgFor, NgSwitchCase, NgSwitch, NgSwitchDefault } from "@angular/common";
+import {
+  NgIf,
+  NgFor,
+  NgSwitchCase,
+  NgSwitch,
+  NgSwitchDefault,
+} from "@angular/common";
 
 @Component({
   selector: "app-root",
@@ -24,7 +30,7 @@ import { NgIf, NgFor, NgSwitchCase, NgSwitch, NgSwitchDefault } from "@angular/c
     NgFor,
     NgSwitch,
     NgSwitchCase,
-    NgSwitchDefault
+    NgSwitchDefault,
     RouterOutlet,
     RouterLink,
   ],
@@ -263,7 +269,6 @@ export class AppComponent {
     { name: "rachel", age: 26, email: "rachel@gmail.com" },
     { name: "ron", age: 27, email: "ron@gmail.com" },
     { name: "lisa", age: 28, email: "lisa@gmail.com" },
-
   ];
 
   //ngIf
