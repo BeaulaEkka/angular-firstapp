@@ -6,7 +6,7 @@ import {
   signal,
   WritableSignal,
 } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { RouterLink, RouterOutlet } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { ProfileComponent } from "./profile/profile.component";
@@ -25,6 +25,8 @@ import { NgIf, NgFor, NgSwitchCase, NgSwitch, NgSwitchDefault } from "@angular/c
     NgSwitch,
     NgSwitchCase,
     NgSwitchDefault
+    RouterOutlet,
+    RouterLink,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
