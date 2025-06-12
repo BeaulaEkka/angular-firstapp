@@ -262,10 +262,23 @@ when styling value comes from property value. eg.theme
 <h1>Attribute Directives</h1>
 <p>look and feel of an element</p>
 
-<h1>/>ngFor Directive in Angular</h1>
+<h1>*ngFor Directive in Angular</h1>
 <ul >
   <li *ngFor="let x of studentList" >{{x}}</li>
 </ul>
 
-<br><br><br><br><br><br><br>
+<ul >
+  <li *ngFor="let x of studentData" >{{x.name}} | {{x.email}}</li>
+</ul>
+<hr>
+<h1>*ngIf Directive in Angular</h1>
+<p>ngIf is used to conditionally include or exclude a block of HTML from the DOM</p>
+
+<h1 *ngIf="showNgIf">Heading NGIF</h1>
+ <div ngIf="login;else elseBlockd                                                                                                                                                                                                                                                                                                                                                                                      l">
+<a>Log In</a>
+<br>
+<a>Log Out</a> </div>
+
+<br><br><br><br><br><br>x<br>
 

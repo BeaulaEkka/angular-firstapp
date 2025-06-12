@@ -247,4 +247,19 @@ export class AppComponent {
   studentList = [
     "john, jane, mary, peter, sam, james, rachel, ron, lisa, mike",
   ];
+
+  studentData = [
+    { name: "john", age: 20, email: "john@gmail.com" },
+    { name: "jane", age: 21, email: "jane@gmail.com" },
+    { name: "mary", age: 22, email: "mary@gmail.com" },
+    { name: "peter", age: 23, email: "peter@gmail.com" },
+    { name: "sam", age: 24, email: "sam@gmail.com" },
+    { name: "james", age: 25, email: "james@gmail.com" },
+    { name: "rachel", age: 26, email: "rachel@gmail.com" },
+    { name: "ron", age: 27, email: "ron@gmail.com" },
+    { name: "lisa", age: 28, email: "lisa@gmail.com" },
+  ];
+  //ngIf
+  showNgIf = false;
+  login = true;
 }
