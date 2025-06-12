@@ -273,12 +273,17 @@ when styling value comes from property value. eg.theme
 <hr>
 <h1>*ngIf Directive in Angular</h1>
 <p>ngIf is used to conditionally include or exclude a block of HTML from the DOM</p>
+<h2>This is true</h2>
 
 <h1 *ngIf="showNgIf">Heading NGIF</h1>
- <div ngIf="login;else elseBlockd                                                                                                                                                                                                                                                                                                                                                                                      l">
-<a>Log In</a>
-<br>
-<a>Log Out</a> </div>
 
-<br><br><br><br><br><br>x<br>
+ <div *ngIf="login;else elseBlock">
+<a>Log Out</a>
+ </div>
+
+ <ng-template #elseBlock>
+  <a >Log Out</a>
+</ng-template>
+
+<br><br><br><br><br><br><br>
 

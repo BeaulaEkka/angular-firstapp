@@ -259,7 +259,8 @@ export class AppComponent {
     { name: "ron", age: 27, email: "ron@gmail.com" },
     { name: "lisa", age: 28, email: "lisa@gmail.com" },
   ];
+  
   //ngIf
-  showNgIf = false;
+  showNgIf = true;
   login = true;
 }
