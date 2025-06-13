@@ -12,5 +12,6 @@ export const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
   { path: "practice", component: PracticeComponent },
+  {path:"profile",component:PracticeComponent},
   { path: "**", component: PageNotFoundComponent },
 ];

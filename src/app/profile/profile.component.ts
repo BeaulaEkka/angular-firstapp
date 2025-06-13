@@ -1,15 +1,11 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+
 @Component({
-  selector: "app-profile",
-  templateUrl: "./profile.component.html",
-  styleUrl: "./profile.component.css",
-  // template: `<h1>Profile Component</h1>`,
-  // styles: [
-  //   `
-  //     h1 {
-  //       color: orange;
-  //     }
-  //   `,
-  // ],
+  selector: 'app-profile',
+  imports: [],
+  templateUrl: './profile.component.html',
+  styleUrl: './profile.component.css'
 })
-export class ProfileComponent {}
+export class ProfileComponent {
+
+}
