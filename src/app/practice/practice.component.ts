@@ -6,8 +6,6 @@ import {
   WritableSignal,
 } from "@angular/core";
 import { RouterLink, RouterOutlet } from "@angular/router";
-import { SignupComponent } from "./signup/signup.component";
-import { ProfileComponent } from "./profile/profile.component";
 import { FormsModule } from "@angular/forms";
 import {
   NgIf,
@@ -16,16 +14,13 @@ import {
   NgSwitch,
   NgSwitchDefault,
 } from "@angular/common";
-import { HeaderComponent } from "./header/header.component";
 import { LoginComponent } from "../login/login.component";
-import { HeaderComponent_1 as HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: "app-practice",
   imports: [
     LoginComponent,
-    SignupComponent,
-    ProfileComponent,
+
     FormsModule,
     NgIf,
     NgFor,
@@ -33,10 +28,7 @@ import { HeaderComponent_1 as HeaderComponent } from "../header/header.component
     NgSwitchCase,
     NgSwitchDefault,
     RouterOutlet,
-    ,
-    HeaderComponent,
-    HeaderComponent_1
-],
+  ],
   templateUrl: "./practice.component.html",
   styleUrl: "./practice.component.css",
 })
