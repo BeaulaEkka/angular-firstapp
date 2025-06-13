@@ -1,0 +1,328 @@
+<p>practice works!</p>
+<p>practice works!</p>
+
+
+
+
+
+<style>
+h1{
+  color:rgb(133, 214, 20)
+}
+
+</style>
+<h1>{{title}}</h1>
+<h2>{{name}}</h2>
+
+<p >{{"adding x and y = "+x+y}}</p>
+<app-login></app-login>
+<app-signup></app-signup>
+<app-profile></app-profile>
+
+<button type="button" (click)="handleClickEvent()">Click Me</button>
+<button type="button" (click)="sum(20,21)">Sum</button>
+<h1>Counting App</h1>
+<div class="increment_container_main">
+
+
+<h1>{{x}}</h1>
+<div class="increment_container">
+
+    <button class="btn btn_increment" type="button" (click)="handleCounter('plus')">Increment</button>
+
+    <button class="btn btn_reset" type="button" (click)="handleCounter('reset')">Reset</button>
+    <button class="btn btn_decrement" type="button" (click)="handleCounter('minus')">Decrement</button>
+</div>
+</div>
+<div>
+    <button type="button" (click)="handleEvent($event)">Click Event</button>
+</div>
+<div  style="background-color: green; width: 100px; height: 100px;margin-top: 50px;" (mouseenter)="handleEvent($event)" >
+
+</div>
+<br/>
+
+<br/>
+<input type="text" name="user" (input)="handleEvent($event)" placeholder="Enter Your Name" value="{{name}}">
+<br/>
+
+<h1>Get and Set Input Values</h1>
+<input type="text" placeholder="Enter your User Name" (input)="getName($event)" value="{{name1}}">
+
+<br/><br/>
+
+
+<h1>The user name is {{displayName}}</h1>
+<button (click)="showName()">Get Name</button>
+
+<button (click)="setName()">Set Name</button>
+<hr>
+<h1>Email:{{email}}</h1>
+<input type="text" placeholder="enter email" #emailField value="{{email}}">
+<button type="button" (click)="getEmail(emailField.value)">get Email</button>
+<button type="button" (click)="setEmail()">set Email</button>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div >
+  <h1>If Else | Control Flow</h1>
+  <button type="button" (click)="hide()">Hide /show</button>
+  <br>
+  <br>
+  @if(display){
+    <div style="width: 200px; height: 200px; background-color: green;">
+    </div>
+  }
+
+</div>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<h1>Toggle Two divs</h1>
+<button type="button" (click)="toggleTwo()">{{toggleDiv?'show red div':'show yellow div'}}</button>
+@if(toggleDiv){
+  <div style="background-color:gold;width: 200px;height: 200px;">
+
+  </div>
+}
+@else {
+  <div style="background-color: red;width: 200px;height: 200px;">
+
+  </div>
+}
+
+<hr>
+
+<h1>Else if | Control Flow</h1>
+<button (click)="handleColor(1)">Red</button>
+<button (click)="handleColor(2)">Green</button>
+<button (click)="handleColor(3)">Yellow</button>
+<button (click)="handleColor(4)">Pink</button>
+
+<input placeholder="Input Color number"type="text" (input)="handleColorInput($event)">
+
+@if(color==1){<div style="background-color:red; width: 100px; height: 100px;"></div>
+
+}@else if(color==2){<div style="background-color:rgb(11, 179, 53); width: 100px; height: 100px;"></div>}
+@else if(color==3){<div style="background-color:rgb(255, 255, 0); width: 100px; height: 100px;"></div>}
+@else{<div style="background-color:rgb(238, 18, 168); width: 100px; height: 100px;"></div>}
+
+
+<br>
+<hr>
+<h1>SWITCH Case</h1>
+<button type="button" (click)="handleSwitchColor('red')">Red</button>
+<button type="button" (click)="handleSwitchColor('green')">Green</button>
+<button type="button" (click)="handleSwitchColor('blue')">Blue</button>
+<button type="button" (click)="handleSwitchColor('yellow')">Yellow</button>
+<button type="button" (click)="handleSwitchColor('pink')">Gold</button>
+<input placeholder="enter color" type="text"(input)="handleSwitchColorChange($event)">
+
+@switch(switchcolor){
+  @case('red'){
+    <h1 style="background-color: red; color: white;padding: 5px;border-radius: 10px; text-transform: capitalize">{{switchcolor}}</h1>
+  }
+  @case('green'){
+    <h1 style="background-color: green; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
+  }
+  @case('blue'){
+    <h1 style="background-color: blue; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
+  }
+  @case('yellow'){
+    <h1 style="background-color: yellow; color: black;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
+  }
+  @default(){
+    <h1 style="background-color: black; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">No Color Match</h1>
+  }
+}
+
+
+
+<br>
+<hr>
+<h1>For Loop in Template File</h1>
+
+@for (user of users; track user){
+  <h2 style="text-transform: capitalize;">{{user}}</h2>
+}
+
+<br>
+<hr>
+<h1>For Loop array</h1>
+<h2>Students</h2>
+@for(student of students;track student.name;let id=$index){
+  <div>
+    <button type="button" (click)="getStudentName(student.name)">Get Name</button>
+
+  <h3>Name:{{student.name}}</h3>
+  <p>Id:{{id+1}}</p>
+  <p>Age: {{student.age}}</p>
+  <p>email: {{student.email}}</p>
+
+  </div>
+
+  <br>
+
+
+}
+
+<hr>
+<h1>Signals</h1>
+<p>Signals are reactive</p>
+<h3>Value of A:</h3>
+
+<button type="button" (click)="count.set(count()-1)">Decrement</button>
+<h1>{{count()}}</h1>
+<button type="button" (click)="count.set(count()+1)">Increment</button>
+
+
+
+
+
+
+<br>  <br>  <br>  <br>  <br>  <br>  <br>
+<hr>
+<h1>Types of Signals</h1>
+<p>{{data()}}</p>
+<button (click)="updateSignal()">update</button>
+<hr>
+<h1>Signal with Computed</h1>
+<h1>{{z()}}</h1>
+<button (click)="showValue()">Show Value</button>
+<button (click)="updateX()">Update X</button>
+
+
+
+<br>
+
+<hr>
+<h1>Effect in Angular</h1>
+<h1>{{userName()}}</h1>
+<h1>{{count()}}</h1>
+<button (click)="startCounting()">Start counting</button>
+<button (click)="startSubtracting()">subtract counting</button>
+
+<button (click)="userName.set('Sam')">update user name</button>
+<button (click)="toggleValue()">display Heading</button>
+
+@if(displayHeading){<h1 style="background-color:green;padding: 5px;">Page heading</h1>}
+
+<br><br><br>
+<hr>
+<h1>For Loop Contextual Variables</h1>
+
+@for(user of users;track user;let i=$index){
+  <!-- @if($first ||$last){
+    <h1 style="color:blue;">{{user}}</h1>
+  }@else{
+    <h1 style="color:red;">{{user}}</h1>
+  } -->
+@if($odd){
+  <h1 style="color:blue;">{{user}}</h1>
+}@else{
+  <h1 style="color:red;">{{user}}</h1>
+}
+}
+
+
+<hr>
+<h1>Two Way binding</h1>
+<!--htmlfile + ts file ... property sync--->
+<!-- <input [(ngModel)]="nameBinding" type="text" placeholder="Enter your name"> -->
+
+<input type="text" (input)="changeName($event)" placeholder="Enter your name">
+
+
+<!-- <h1>{{nameBinding}}</h1> -->
+<h1>{{nameBinding}}</h1>
+<hr>
+<h1>To Do List</h1>
+<input type="text" placeholder="Enter your task" [(ngModel)]="task">
+<button type="button" (click)="addTask()">Add Task</button>
+@for(task of taskList;track task){
+  <h1 style="text-transform: capitalize;">{{task.id}}. {{task.task}} <button type="button" (click)="deleteTask(task.id)">Delete</button></h1>
+}
+<hr>
+<h1 [style.backgroundColor]="redColor" [style.fontSize.pt]="fontSize">Dynamic styling</h1>
+when styling value comes from property value. eg.theme
+
+<h1 [style.fontSize]="zoom ? headingSizeBig : headingSize">Heading</h1>
+<button type="button"(click)="updateHeadingSize()">Toggle Font</button>
+
+<hr>
+<h1>Directives in Angular</h1>
+<p>Directive is a class that adds additonal behaviour to elements in your application</p>
+<h1>Structural Directives</h1>
+<p>dom</p>
+<h2 *ngIf="showHide">Heading Tag</h2>
+
+
+<h1>Component Directives</h1>
+
+<p>component template. Commonly used</p>
+<h1>Attribute Directives</h1>
+<p>look and feel of an element</p>
+
+<h1>*ngFor Directive in Angular</h1>
+<ul >
+  <li *ngFor="let x of studentList" >{{x}}</li>
+</ul>
+
+<ul >
+  <li *ngFor="let x of studentData" >{{x.name}} | {{x.email}}</li>
+</ul>
+<hr>
+<h1>*ngIf Directive in Angular</h1>
+<p>ngIf is used to conditionally include or exclude a block of HTML from the DOM</p>
+<h2 *ngIf="showNgIf">Heading NGIF</h2>
+<h2>This is true</h2>
+
+
+
+ <div *ngIf="login;else elseBlock">
+<a>Log Out</a>
+ </div>
+
+ <ng-template #elseBlock>
+  <a >Log Out</a>
+</ng-template>
+
+<div *ngIf="block==0">
+  <h1>Heading 1</h1>
+
+</div>
+<div *ngIf="block==1">
+  <h1>Heading 2</h1>
+</div>
+
+<button (click)="updateblockHeading()">updateBlock</button>
+<hr>
+<h1>ngSwitch Directive in Angular</h1>
+<p>ngSwitch is used to conditionally include or exclude a block of HTML based on a specific expression</p>
+
+<div [ngSwitch]="colorSwitch">
+<h2 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h2>
+<h2   *ngSwitchCase="'green'" style="background-color: green;">Green Color</h2>
+<h2 *ngSwitchCase="'blue'" style="background-color: blue;">Blue Color</h2>
+<h2 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h2>
+<h2 *ngSwitchCase="'pink'" style="background-color: hotpink;">Pink Color</h2>
+<h2 *ngSwitchDefault >No Color Match</h2>
+
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('pink')">Pink</button>
+</div>
+
+<hr>
+
+
+<br><br><br><br><br><br><br>
+
