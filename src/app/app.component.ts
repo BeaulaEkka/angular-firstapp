@@ -18,6 +18,7 @@ import {
   NgSwitch,
   NgSwitchDefault,
 } from "@angular/common";
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: "app-root",
@@ -33,7 +34,8 @@ import {
     NgSwitchDefault,
     RouterOutlet,
     RouterLink,
-  ],
+    HeaderComponent
+],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
 })
