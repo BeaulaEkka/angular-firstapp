@@ -2,5 +2,21 @@
 
 <app-header>
 
-</app-header>
+
+</app-header>  <h1>Basic Reactive Forms</h1>
+
+<form accept="" method="post">
+  <label>User Name</label><br>
+<input type="text" placeholder="Enter your name" [formControl]="name"><br><br>
+<label>Password</label><br>
+<input type="text" placeholder="Enter your password" [formControl]="password">
+<br>
+<br>
+<button type="button" (click)="displayValue()">login</button>
+<h3>{{name.value}}</h3>
+<h3>{{password.value}}</h3>
+
+</form>
+
+
 <router-outlet/>
