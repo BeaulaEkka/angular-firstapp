@@ -14,6 +14,10 @@ export const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
   { path: "practice", component: PracticeComponent },
-  { path: "profile", component: ProfileComponent },
+  {
+    path: "profile",
+    component: ProfileComponent,
+    data: { name: "beaula bee" },
+  },
   { path: "**", component: PageNotFoundComponent },
 ];

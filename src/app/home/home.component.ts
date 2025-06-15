@@ -9,8 +9,12 @@ import { Router, RouterLink } from "@angular/router";
 })
 export class HomeComponent {
   constructor(private router: Router) {}
+//2nd method
+  // goToProfile(name: string) {
+  //   this.router.navigate(["/profile"], { queryParams: { name } });
+  // }
 
-  goToProfile(name: string) {
-    this.router.navigate(["/profile"], { queryParams: { name } });
-  }
+  //3rd method
+  
+
 }

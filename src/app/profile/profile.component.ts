@@ -18,8 +18,13 @@ export class ProfileComponent {
     //   console.log(this.userName);
     // }
 
-    this.route.queryParams.subscribe((params) => {
-      this.userName = params["name"];
+    // this.route.queryParams.subscribe((params) => {
+    //   this.userName = params["name"];
+    // });
+
+    this.route.data.subscribe((data) => {
+      this.userName = data["name"];
+      console.log(data["name"]);
     });
   }
 }
