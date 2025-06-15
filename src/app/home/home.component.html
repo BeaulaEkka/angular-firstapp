@@ -9,3 +9,11 @@
 
 <!-- third method -->
  <a routerLink ="/profile">Go to Profile</a>
+
+ <h2>User List</h2>
+ <ul>
+  @for(user of users;track user.id){
+    <a routerLink="user">{{user.name}}</a>
+   }
+
+ </ul>
