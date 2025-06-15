@@ -9,7 +9,10 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ProfileComponent {
   userName: string | null = "";
+  //regisyer active route
+
   constructor(private route: ActivatedRoute) {}
+  //ngononinit lifee cycle hook
   ngOnInit() {
     //   this.userName = this.route.snapshot.paramMap.get("name");
     //   console.log(this.userName);
