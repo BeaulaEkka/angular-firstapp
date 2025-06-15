@@ -19,7 +19,7 @@ export class ProfileComponent {
     // }
 
     this.route.queryParams.subscribe((params) => {
-      console.log(params["name"]);
+      this.userName = params["name"];
     });
   }
 }
