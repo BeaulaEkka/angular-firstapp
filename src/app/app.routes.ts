@@ -6,6 +6,7 @@ import { PracticeComponent } from "./practice/practice.component";
 import { HomeComponent } from "./home/home.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { UserComponent } from "./user/user.component";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
   { path: "practice", component: PracticeComponent },
+  { path: "user/:id", component: UserComponent },
   {
     path: "profile",
     component: ProfileComponent,

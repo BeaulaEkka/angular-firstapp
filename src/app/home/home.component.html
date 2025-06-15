@@ -12,9 +12,9 @@
 <h1>Dynamic Routing</h1>
 
  <h2>User List</h2>
- <ul>
+ <a>
   @for(user of users;track user.id){
-    <a routerLink="user">{{user.name}}</a>
-   }
+   <!-- <li><a [routerLink]="['/user',user.id]">{{user.name}}</a></li>} -->
+    <li><a routerLink="user/{{user.id}}">{{user.name}}</a></li>
 
- </ul>
+  }
