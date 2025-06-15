@@ -8,10 +8,14 @@ import { ActivatedRoute } from "@angular/router";
   styleUrl: "./user.component.css",
 })
 export class UserComponent {
+  name: string | null = "";
+  id: string | null = "";
   constructor(private route: ActivatedRoute) {}
+
   ngOnInit() {
     this.route.params.subscribe((params) => {
-      console.log(params["id"], params["name"]);
+      this.id = params["id"];
+      this.name = params["name"];
     });
   }
 }
