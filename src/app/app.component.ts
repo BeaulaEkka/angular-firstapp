@@ -17,4 +17,9 @@ export class AppComponent {
     console.log(this.name.value);
     console.log(this.password.value);
   }
+
+  setValues() {
+    this.name.setValue("Peter");
+    this.password.setValue("123456");
+  }
 }
