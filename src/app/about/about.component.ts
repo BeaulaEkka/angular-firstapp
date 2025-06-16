@@ -1,15 +1,17 @@
 import { NgIf } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, NgModule } from "@angular/core";
 import {
   FormControl,
   FormGroup,
+  FormsModule,
+  NgForm,
   ReactiveFormsModule,
   Validators,
 } from "@angular/forms";
 
 @Component({
   selector: "app-about",
-  imports: [ReactiveFormsModule, NgIf],
+  imports: [ReactiveFormsModule, NgIf, FormsModule],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css",
 })
@@ -48,5 +50,9 @@ export class AboutComponent {
   }
   get password() {
     return this.profileForm.get("password");
+  }
+
+  addDetails(val: NgForm) {
+    console.log(val);
   }
 }
