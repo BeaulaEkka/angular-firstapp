@@ -52,12 +52,9 @@ export class AboutComponent {
     return this.profileForm.get("password");
   }
 
+  userDetails: any = {};
   addDetails(val: NgForm) {
     console.log(val);
+    this.userDetails = val;
   }
-
-  userDetails(val:NgForm) {
-    console.log(val);
-  }
-
 }
