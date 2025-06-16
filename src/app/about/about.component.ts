@@ -55,4 +55,8 @@ export class AboutComponent {
   addDetails(val: NgForm) {
     console.log(val);
   }
+
+  userDetails(val:NgForm) {
+    this.userDetails = val;
+  }
 }
