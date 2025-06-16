@@ -1,17 +1,31 @@
+import { NgIf } from "@angular/common";
 import { Component } from "@angular/core";
-import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from "@angular/forms";
 
 @Component({
   selector: "app-about",
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css",
 })
 export class AboutComponent {
   profileForm = new FormGroup({
-    name: new FormControl("default name"),
-    email: new FormControl("default@default.com"),
-    password: new FormControl("default password"),
+    name: new FormControl("", [Validators.required]),
+    email: new FormControl("", [
+      Validators.required,
+      Validators.email,
+      Validators.maxLength(50),
+      Validators.pattern("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"),
+    ]),
+    password: new FormControl("", [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
   });
 
   onSubmit() {
@@ -24,5 +38,15 @@ export class AboutComponent {
       email: "john@gmail.com",
       password: "123456",
     });
+  }
+
+  get name() {
+    return this.profileForm.get("name");
+  }
+  get email() {
+    return this.profileForm.get("email");
+  }
+  get password() {
+    return this.profileForm.get("password");
   }
 }
