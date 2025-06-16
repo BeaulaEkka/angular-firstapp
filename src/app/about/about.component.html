@@ -7,4 +7,11 @@
   <input type="text" placeholder="Enter your email" formControlName="email"><br><br>
   <button type="submit">Submit</button>
 
+  <button type="button" (click)="setValueAbout()">Set Value</button>
+
 </form>
+
+<h1>The values</h1>
+<p>Name:{{this.profileForm.value.name}}</p>
+<p>Password:{{this.profileForm.value.password}}</p>
+<p>Email:{{this.profileForm.value.email}}</p>
