@@ -57,6 +57,5 @@ export class AboutComponent {
   }
 
   userDetails(val:NgForm) {
-    this.userDetails = val;
-  }
+   
 }
