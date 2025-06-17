@@ -1,37 +1,29 @@
-<h1>this is home </h1>
+<main class="mainContainer">
+  <h1>This is Home</h1>
 
-<!-- <a [routerLink]="['/profile',{name:'beaula ekka'}]">Go to Profile Page </a> -->
+  <!-- Navigate to static Profile page -->
+  <a [routerLink]="['/profile']">Go to Profile</a>
 
- <!-- second method -->
- <!-- <button (click)="(goToProfile('peter'))">Go to Profile Page</button>
- <button (click)="(goToProfile('Sam'))">Go to Profile Page</button> -->
+  <h1>Dynamic Routing</h1>
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users; trackBy: trackById">
+      <a [routerLink]="['/user', user.id, user.name]">{{ user.name }}</a>
+    </li>
+  </ul>
 
-
-<!-- third method -->
- <a routerLink ="/profile">Go to Profile</a>
-<h1>Dynamic Routing</h1>
-
- <h2>User List</h2>
- <a>
-  @for(user of users;track user.id){
-   <!-- <li><a [routerLink]="['/user',user.id]">{{user.name}}</a></li>} -->
-    <li><a [routerLink]="['/user',user.id,user.name ]">{{user.name}}</a></li>
-
-  }
   <h1>Basic Reactive Forms</h1>
-  <form accept="" method="post">
+  <form>
     <label>User Name</label><br>
-  <input type="text" placeholder="Enter your name" [formControl]="name"><br><br>
-  <label>Password</label><br>
-  <input type="text" placeholder="Enter your password" [formControl]="password">
-  <br>
-  <br>
-  <button type="button" (click)="displayValue()">login</button>
-  <button type="button" (click)="setValues()">Set Values in Fields</button>
+    <input type="text" placeholder="Enter your name" [formControl]="name"><br><br>
 
+    <label>Password</label><br>
+    <input type="text" placeholder="Enter your password" [formControl]="password"><br><br>
 
-  <h3>{{name.value}}</h3>
-  <h3>{{password.value}}</h3>
+    <button type="button" (click)="displayValue()">Login</button>
+    <button type="button" (click)="setValues()">Set Values in Fields</button>
 
-
+    <h3>{{ name.value }}</h3>
+    <h3>{{ password.value }}</h3>
   </form>
+</main>
