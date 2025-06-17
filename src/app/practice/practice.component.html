@@ -1,37 +1,29 @@
 <div class="mainContainer">
-  
 
-
-  <style>
-  h1{
-    color:rgb(133, 214, 20)
-  }
-
-  </style>
-  <h1>{{title}}</h1>
+  <h1 class="mainTitle">{{title}}</h1>
   <h2>{{name}}</h2>
 
   <p >{{"adding x and y = "+x+y}}</p>
   <app-login></app-login>
 
 
-  <button type="button" (click)="handleClickEvent()">Click Me</button>
-  <button type="button" (click)="sum(20,21)">Sum</button>
+  <button class="buttonMain" type="button" (click)="handleClickEvent()">Click Me</button>
+  <button class="buttonMain" type="button" (click)="sum(20,21)">Sum</button>
   <h1>Counting App</h1>
   <div class="increment_container_main">
 
 
-  <h1>{{x}}</h1>
+  <h1 class="mainTitle">{{x}}</h1>
   <div class="increment_container">
 
-      <button class="btn btn_increment" type="button" (click)="handleCounter('plus')">Increment</button>
+      <button class="btn btn_increment buttonMain" type="button" (click)="handleCounter('plus')">Increment</button>
 
-      <button class="btn btn_reset" type="button" (click)="handleCounter('reset')">Reset</button>
-      <button class="btn btn_decrement" type="button" (click)="handleCounter('minus')">Decrement</button>
+      <button class="btn btn_reset buttonMain" type="button" (click)="handleCounter('reset')">Reset</button>
+      <button class="btn btn_decrement buttonMain" type="button" (click)="handleCounter('minus')">Decrement</button>
   </div>
   </div>
   <div>
-      <button type="button" (click)="handleEvent($event)">Click Event</button>
+      <button class="buttonMain"  type="button" (click)="handleEvent($event)">Click Event</button>
   </div>
   <div  style="background-color: green; width: 100px; height: 100px;margin-top: 50px;" (mouseenter)="handleEvent($event)" >
 
@@ -42,18 +34,18 @@
   <input type="text" name="user" (input)="handleEvent($event)" placeholder="Enter Your Name" value="{{name}}">
   <br/>
 
-  <h1>Get and Set Input Values</h1>
+  <h1 class="mainTitle">Get and Set Input Values</h1>
   <input type="text" placeholder="Enter your User Name" (input)="getName($event)" value="{{name1}}">
 
   <br/><br/>
 
 
-  <h1>The user name is {{displayName}}</h1>
+  <h1 class="mainTitle">The user name is {{displayName}}</h1>
   <button (click)="showName()">Get Name</button>
 
   <button (click)="setName()">Set Name</button>
   <hr>
-  <h1>Email:{{email}}</h1>
+  <h1 class="mainTitle">Email:{{email}}</h1>
   <input type="text" placeholder="enter email" #emailField value="{{email}}">
   <button type="button" (click)="getEmail(emailField.value)">get Email</button>
   <button type="button" (click)="setEmail()">set Email</button>
@@ -63,7 +55,7 @@
   <br>
   <hr>
   <div >
-    <h1>If Else | Control Flow</h1>
+    <h1 class="mainTitle">If Else | Control Flow</h1>
     <button type="button" (click)="hide()">Hide /show</button>
     <br>
     <br>
@@ -80,7 +72,7 @@
   <br>
   <br>
   <br>
-  <h1>Toggle Two divs</h1>
+  <h1 class="mainTitle">Toggle Two divs</h1>
   <button type="button" (click)="toggleTwo()">{{toggleDiv?'show red div':'show yellow div'}}</button>
   @if(toggleDiv){
     <div style="background-color:gold;width: 200px;height: 200px;">
@@ -95,7 +87,7 @@
 
   <hr>
 
-  <h1>Else if | Control Flow</h1>
+  <h1 class="mainTitle">Else if | Control Flow</h1>
   <button (click)="handleColor(1)">Red</button>
   <button (click)="handleColor(2)">Green</button>
   <button (click)="handleColor(3)">Yellow</button>
@@ -112,7 +104,7 @@
 
   <br>
   <hr>
-  <h1>SWITCH Case</h1>
+  <h1 class="mainTitle">SWITCH Case</h1>
   <button type="button" (click)="handleSwitchColor('red')">Red</button>
   <button type="button" (click)="handleSwitchColor('green')">Green</button>
   <button type="button" (click)="handleSwitchColor('blue')">Blue</button>
@@ -122,7 +114,7 @@
 
   @switch(switchcolor){
     @case('red'){
-      <h1 style="background-color: red; color: white;padding: 5px;border-radius: 10px; text-transform: capitalize">{{switchcolor}}</h1>
+      <h1 class="mainTitle" style="background-color: red; color: white;padding: 5px;border-radius: 10px; text-transform: capitalize">{{switchcolor}}</h1>
     }
     @case('green'){
       <h1 style="background-color: green; color: white;padding: 5px;border-radius: 10px;text-transform: capitalize">{{switchcolor}}</h1>
@@ -142,7 +134,7 @@
 
   <br>
   <hr>
-  <h1>For Loop in Template File</h1>
+  <h1 class="mainTitle">For Loop in Template File</h1>
 
   @for (user of users; track user){
     <h2 style="text-transform: capitalize;">{{user}}</h2>
@@ -150,7 +142,7 @@
 
   <br>
   <hr>
-  <h1>For Loop array</h1>
+  <h1 class="mainTitle">For Loop array</h1>
   <h2>Students</h2>
   @for(student of students;track student.name;let id=$index){
     <div>
@@ -169,12 +161,12 @@
   }
 
   <hr>
-  <h1>Signals</h1>
+  <h1 class="mainTitle">Signals</h1>
   <p>Signals are reactive</p>
   <h3>Value of A:</h3>
 
   <button type="button" (click)="count.set(count()-1)">Decrement</button>
-  <h1>{{count()}}</h1>
+  <h1 class="mainTitle">{{count()}}</h1>
   <button type="button" (click)="count.set(count()+1)">Increment</button>
 
 
@@ -184,7 +176,7 @@
 
   <br>  <br>  <br>  <br>  <br>  <br>  <br>
   <hr>
-  <h1>Types of Signals</h1>
+  <h1 class="mainTitle">Types of Signals</h1>
   <p>{{data()}}</p>
   <button (click)="updateSignal()">update</button>
   <hr>
@@ -198,7 +190,7 @@
   <br>
 
   <hr>
-  <h1>Effect in Angular</h1>
+  <h1 class="mainTitle">Effect in Angular</h1>
   <h1>{{userName()}}</h1>
   <h1>{{count()}}</h1>
   <button (click)="startCounting()">Start counting</button>
@@ -228,7 +220,7 @@
 
 
   <hr>
-  <h1>Two Way binding</h1>
+  <h1 class="mainTitle">Two Way binding</h1>
   <!--htmlfile + ts file ... property sync--->
   <!-- <input [(ngModel)]="nameBinding" type="text" placeholder="Enter your name"> -->
 
@@ -236,36 +228,36 @@
 
 
   <!-- <h1>{{nameBinding}}</h1> -->
-  <h1>{{nameBinding}}</h1>
+  <h1 class="mainTitle">{{nameBinding}}</h1>
   <hr>
-  <h1>To Do List</h1>
+  <h1 class="mainTitle">To Do List</h1>
   <input type="text" placeholder="Enter your task" [(ngModel)]="task">
   <button type="button" (click)="addTask()">Add Task</button>
   @for(task of taskList;track task){
     <h1 style="text-transform: capitalize;">{{task.id}}. {{task.task}} <button type="button" (click)="deleteTask(task.id)">Delete</button></h1>
   }
   <hr>
-  <h1 [style.backgroundColor]="redColor" [style.fontSize.pt]="fontSize">Dynamic styling</h1>
+  <h1 class="mainTitle" [style.backgroundColor]="redColor" [style.fontSize.pt]="fontSize">Dynamic styling</h1>
   when styling value comes from property value. eg.theme
 
   <h1 [style.fontSize]="zoom ? headingSizeBig : headingSize">Heading</h1>
   <button type="button"(click)="updateHeadingSize()">Toggle Font</button>
 
   <hr>
-  <h1>Directives in Angular</h1>
+  <h1 class="mainTitle">Directives in Angular</h1>
   <p>Directive is a class that adds additonal behaviour to elements in your application</p>
   <h1>Structural Directives</h1>
   <p>dom</p>
   <h2 *ngIf="showHide">Heading Tag</h2>
 
 
-  <h1>Component Directives</h1>
+  <h1 class="mainTitle">Component Directives</h1>
 
   <p>component template. Commonly used</p>
-  <h1>Attribute Directives</h1>
+  <h1 class="mainTitle">Attribute Directives</h1>
   <p>look and feel of an element</p>
 
-  <h1>*ngFor Directive in Angular</h1>
+  <h1 class="mainTitle">*ngFor Directive in Angular</h1>
   <ul >
     <li *ngFor="let x of studentList" >{{x}}</li>
   </ul>
@@ -274,7 +266,7 @@
     <li *ngFor="let x of studentData" >{{x.name}} | {{x.email}}</li>
   </ul>
   <hr>
-  <h1>*ngIf Directive in Angular</h1>
+  <h1 class="mainTitle">*ngIf Directive in Angular</h1>
   <p>ngIf is used to conditionally include or exclude a block of HTML from the DOM</p>
   <h2 *ngIf="showNgIf">Heading NGIF</h2>
   <h2>This is true</h2>
@@ -290,16 +282,16 @@
   </ng-template>
 
   <div *ngIf="block==0">
-    <h1>Heading 1</h1>
+    <h1 class="mainTitle">Heading 1</h1>
 
   </div>
   <div *ngIf="block==1">
-    <h1>Heading 2</h1>
+    <h1 class="mainTitle">Heading 2</h1>
   </div>
 
   <button (click)="updateblockHeading()">updateBlock</button>
   <hr>
-  <h1>ngSwitch Directive in Angular</h1>
+  <h1 class="mainTitle">ngSwitch Directive in Angular</h1>
   <p>ngSwitch is used to conditionally include or exclude a block of HTML based on a specific expression</p>
 
   <div [ngSwitch]="colorSwitch">
@@ -310,11 +302,11 @@
   <h2 *ngSwitchCase="'pink'" style="background-color: hotpink;">Pink Color</h2>
   <h2 *ngSwitchDefault >No Color Match</h2>
 
-  <button (click)="changeColor('red')">Red</button>
-  <button (click)="changeColor('green')">Green</button>
-  <button (click)="changeColor('blue')">Blue</button>
-  <button (click)="changeColor('yellow')">Yellow</button>
-  <button (click)="changeColor('pink')">Pink</button>
+  <button class="redBtn" (click)="changeColor('red')">Red</button>
+  <button  class="greenBtn"(click)="changeColor('green')">Green</button>
+  <button class="blueBtn" (click)="changeColor('blue')">Blue</button>
+  <button class="yellowBtn" (click)="changeColor('yellow')">Yellow</button>
+  <button class="pinkBtn" (click)="changeColor('pink')">Pink</button>
   </div>
 
   <hr>

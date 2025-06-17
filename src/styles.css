@@ -17,17 +17,119 @@
   border-radius: 8px;
 }
 .buttonMain{
-  background-color: rgb(10, 154, 201) ;
+  background-color: rgb(6, 208, 157);
   color: white;
   border-radius: 8px;
-  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom:10px;
   border: none;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left:
   10px;
   margin-right: 10px;
-  .buttonMain:hover{
-    background-color: rgb(10, 154, 201);
-    }
+  font-size: 1rem;
+  font-weight: bold;
+
 }
+.buttonMain:hover{
+  background-color: rgb(7, 181, 137);
+  }
+
+  .redBtn{
+    background-color: rgb(239, 71, 71);
+    color: white;
+    border-radius: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top:
+    10px;
+    padding-bottom:10px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:
+    10px;
+    margin-right: 10px
+  }
+
+  .redBtn:hover{
+    background-color: rgb(204, 61, 61);
+    }
+
+    .blueBtn{
+      background-color: rgb(71, 172, 239);
+      color: white;
+      border-radius: 8px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top:
+      10px;
+      padding-bottom:10px;
+      border: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left:
+      10px;
+      margin-right: 10px
+    }
+.blueBtn:hover{
+  background-color: rgb(61, 151, 204);
+  }
+  .greenBtn{
+    background-color: rgb(61, 205, 176);
+    color: white;
+    border-radius: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top:    10px;
+    padding-bottom:10px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px
+  }
+
+        .greenBtn:hover{
+          background-color: rgb(14, 121, 22);
+          }
+          .yellowBtn{
+background-color: rgb(238, 219, 49);
+color:               white;
+border-radius: 8px;
+padding-right: 20px;
+    padding-left: 20px;
+    padding-top:    10px;
+    padding-bottom:10px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px
+          }
+          .yellowBtn:hover{
+            background-color: rgb(219, 203, 49);
+            }
+            .pinkBtn{
+              background-color: hotpink;
+              color: white;
+              border-radius: 8px;
+              padding-right: 20px;
+              padding-left: 20px;
+                padding-top:    10px;
+                padding-bottom:10px;
+                border: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+              }
+
+
+
+
+
+
+
+
+
+
+
