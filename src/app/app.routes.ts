@@ -15,11 +15,12 @@ export const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "login", component: LoginComponent },
   { path: "practice", component: PracticeComponent },
-  { path: "user/:id/:name", component: UserComponent },
+  { path: "user", component: UserComponent },
   {
     path: "profile",
     component: ProfileComponent,
     data: { name: "beaula bee" },
   },
+  { path: "user", component: UserComponent },
   { path: "**", component: PageNotFoundComponent },
 ];

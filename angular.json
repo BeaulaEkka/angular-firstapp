@@ -27,7 +27,7 @@
               }
             ],
             "styles": [
-              "src/theme.css"
+              "src/style.css"
             ],
             "scripts": []
           },
