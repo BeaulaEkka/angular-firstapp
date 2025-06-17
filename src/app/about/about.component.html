@@ -32,25 +32,51 @@
 
 <h1>Template Driven Forms</h1>
 <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
+  <!-- name -->
+   <label>Name</label><br>
   <input  #templateName="ngModel" type="text" placeholder="Enter your name" name="templateName" ngModel required>
   <br><span class="error" *ngIf="templateName.invalid && templateName.touched">Name is required</span>
   <br><br>
 
-  <input  type="text" placeholder="Enter your password" name="templatePassword"ngModel>
+<!-- email -->
+ <label>Email</label><br>
+ <input #templateEmail="ngModel" type="text" placeholder="Enter your email" name="templateEmail" ngModel required email>
+ <br><span class="error" *ngIf="templateEmail.invalid && templateEmail.touched">Please provide a valid email</span>
+ <br><br>
+
+
+<!-- password -->
+ <label>Password</label><br>
+  <input #templatePassword="ngModel" type="text"
+   placeholder="Enter your password" minlength="5" name="templatePassword"ngModel required>
+  <br><span class="error" *ngIf="templatePassword.invalid && templatePassword.touched">Please provide a valid password</span>
   <br> <br>
 
- <select title="gender" name="gender" id="gender" ngModel>
+  <!-- gender -->
+   <label>Select Your Gender</label><br>
+ <select #gender="ngModel" title="gender" name="gender" id="gender" ngModel required>
   <option value="" disabled selected>Select Gender</option>
   <option value="Male">Male</option>
   <option value="Female">Female</option>
  </select>
+ <br><span class="error" *ngIf="gender.invalid && gender.touched">Gender is required</span>
  <br><br>
 
+
+ <!-- age -->
  <label>Select Your age</label><br>
-<input type="range" name="range" min="0" max="100" ngModel><br>
+<input #range="ngModel" type="range" name="range" min="0" max="100" ngModel required><br>
+<span class="error" *ngIf="range.invalid && range.touched">Please select your age</span>
+<br><br>
+
+<!-- address -->
+ <label>Address</label><br>
+ <textarea pattern="[a-zA-Z0-9\s]+" #address="ngModel" name="address" id="address" ngModel required></textarea>
+ <br><span class="error" *ngIf="address.invalid && address.touched">Please enter a valid address</span>
+ <br><br>
 
 
- <button type="submit" >Add User</button>
+ <button  [disabled]="userForm.invalid" userForm.invalid type="submit" >Add User</button>
 
  </form>
 
@@ -58,5 +84,6 @@
  <h3>{{userDetails.templatePassword}}</h3>
  <h3>{{userDetails.gender}}</h3>
  <h3>{{userDetails.range}}</h3>
+ <h3>{{userDetails.address}}</h3>
  <hr>
 
