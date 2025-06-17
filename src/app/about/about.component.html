@@ -29,12 +29,14 @@
 <h1>Reactive Form Validation</h1>
 
 <hr>
+
 <h1>Template Driven Forms</h1>
 <form #userForm="ngForm" (ngSubmit)="addDetails(userForm.value)">
-  <input type="text" placeholder="Enter your name" name="templateName" ngModel>
+  <input  #templateName="ngModel" type="text" placeholder="Enter your name" name="templateName" ngModel required>
+  <br><span class="error" *ngIf="templateName.invalid && templateName.touched">Name is required</span>
   <br><br>
 
-  <input type="text" placeholder="Enter your password" name="templatePassword"ngModel>
+  <input  type="text" placeholder="Enter your password" name="templatePassword"ngModel>
   <br> <br>
 
  <select title="gender" name="gender" id="gender" ngModel>

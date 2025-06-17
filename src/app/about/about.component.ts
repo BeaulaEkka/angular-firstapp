@@ -11,7 +11,7 @@ import {
 
 @Component({
   selector: "app-about",
-  imports: [ReactiveFormsModule, NgIf, FormsModule],
+  imports: [ReactiveFormsModule, NgIf, FormsModule,NgIf],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css",
 })
