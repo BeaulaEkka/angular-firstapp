@@ -1,10 +1,10 @@
 <main class="mainContainer">
-  <h1>This is Home</h1>
+  <h1 class="mainTitle">This is Home</h1>
 
   <!-- Navigate to static Profile page -->
   <a [routerLink]="['/profile']">Go to Profile</a>
 
-  <h1>Dynamic Routing</h1>
+  <h1 class="mainTitle">Dynamic Routing</h1>
   <h2>User List</h2>
   <ul>
     <li *ngFor="let user of users; trackBy: trackById">
@@ -12,7 +12,7 @@
     </li>
   </ul>
 
-  <h1>Basic Reactive Forms</h1>
+  <h1 class="mainTitle">Basic Reactive Forms</h1>
   <form>
     <label>User Name</label><br>
     <input type="text" placeholder="Enter your name" [formControl]="name"><br><br>
@@ -20,7 +20,7 @@
     <label>Password</label><br>
     <input type="text" placeholder="Enter your password" [formControl]="password"><br><br>
 
-    <button type="button" (click)="displayValue()">Login</button>
+    <button class="buttonMain" type="button" (click)="displayValue()">Login</button>
     <button type="button" (click)="setValues()">Set Values in Fields</button>
 
     <h3>{{ name.value }}</h3>
