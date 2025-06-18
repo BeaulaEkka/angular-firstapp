@@ -156,8 +156,6 @@
     </div>
 
     <br>
-
-
   }
 
   <hr>
@@ -165,8 +163,12 @@
   <p>Signals are reactive</p>
   <h3>Value of A:</h3>
 
-  <button type="button" (click)="count.set(count()-1)">Decrement</button>
-  <h1 class="mainTitle">{{count()}}</h1>
+  <h1 >{{count()}}</h1>
+  <div>
+
+
+  <button type="button" (click)="count.set(count()-1)">Decrement</button></div>
+
   <button type="button" (click)="count.set(count()+1)">Increment</button>
 
 
