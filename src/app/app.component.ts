@@ -3,7 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router'
 import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
-import { NgFor } from '@angular/common'
+
 
 @Component({
   selector: 'app-root',
@@ -25,5 +25,5 @@ export class AppComponent {
   }
 
   //reuseComponents
-  reuseUser = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
+  reuseUsers = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
 }
