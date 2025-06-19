@@ -3,10 +3,17 @@ import { RouterLink, RouterOutlet } from '@angular/router'
 import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
+import { NgFor } from '@angular/common'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, ReactiveFormsModule, UserComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    ReactiveFormsModule,
+    UserComponent,
+    
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -16,5 +23,7 @@ export class AppComponent {
   onUserChange(user: string) {
     this.user = user
   }
-  @Input() selectedUser: string = ''
+
+  //reuseComponents
+  reuseUsers = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
 }

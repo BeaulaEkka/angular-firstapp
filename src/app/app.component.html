@@ -9,12 +9,13 @@
     <option value="Bruce Wane">Bruce Wane</option>
     <option value="Peter Parker">Peter Parker</option>
     <option value="Tony Stark">Tony Stark</option>
-
-
   </select>
+
+  <h1>Reuse Components</h1>
+  @for (reuseUser of reuseUsers; track reuseUser) {
+    <h2>{{reuseUser}}</h2>}
 </div>
 
-
-
-
 <router-outlet/>
+
+
