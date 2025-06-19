@@ -3,8 +3,18 @@
 <app-header>
 </app-header>
 <div class="passData">
-  <app-user user="pixy"></app-user>
+  <app-user [user]="user"></app-user>
+
+  <select #selectedUser (change)="onUserChange(selectedUser.value)" >
+    <option value="Bruce Wane">Bruce Wane</option>
+    <option value="Peter Parker">Peter Parker</option>
+    <option value="Tony Stark">Tony Stark</option>
+
+
+  </select>
 </div>
+
+
 
 
 <router-outlet/>
