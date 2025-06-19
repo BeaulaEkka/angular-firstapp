@@ -21,4 +21,7 @@ export class UserComponent {
   @Input() user: string | null = ''
   @Input() city: string | null = ''
   @Input() reuseUser: string = ''
+
+  //reuse components child to parent
+  cToPUser=['Hilary','Mary','Martha','Liz','Nancy','Lily','Jenny','Lily']
 }
