@@ -13,8 +13,15 @@
 
   <h1>Reuse Components</h1>
   @for (reuseUser of reuseUsers; track reuseUser) {
-    <h2>{{reuseUser}}</h2>}
-</div>
+    <h2>
+      {{reuseUser}}
+
+    </h2>}
+    <h3>
+      <app-user [reuseUsers]="reuseUsers">
+
+    </app-user></h3>
+
 
 <router-outlet/>
 
