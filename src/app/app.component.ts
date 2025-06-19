@@ -12,7 +12,7 @@ import { NgFor } from '@angular/common'
     HeaderComponent,
     ReactiveFormsModule,
     UserComponent,
-    
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -25,5 +25,5 @@ export class AppComponent {
   }
 
   //reuseComponents
-  reuseUsers = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
+  reuseUser = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
 }

@@ -14,11 +14,11 @@
   <h1>Reuse Components</h1>
   @for (reuseUser of reuseUsers; track reuseUser) {
     <h2>
-      {{reuseUser}}
+      <!-- {{reuseUser}} -->
 
     </h2>}
     <h3>
-      <app-user [reuseUsers]="reuseUsers">
+      <app-user [reuseUser]="reuseUser">
 
     </app-user></h3>
 

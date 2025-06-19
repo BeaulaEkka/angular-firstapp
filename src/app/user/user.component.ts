@@ -20,5 +20,5 @@ export class UserComponent {
   }
   @Input() user: string | null = ''
   @Input() city: string | null = ''
-  @Input() reuseUsers: string = ''
+  @Input() reuseUser: string = ''
 }
