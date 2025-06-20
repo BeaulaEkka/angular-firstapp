@@ -17,15 +17,12 @@
       <!-- {{reuseUser}} -->
 
     </h2>
-    <p>
-      <app-user [reuseUser]="reuseUser">
+    <!-- <p>
+      <app-user
+      [reuseUser]="reuseUser"
+      >
 
-    </app-user></p>}
-
-
-
-
-
-<router-outlet/>
-
+    </app-user></p> -->
+    <app-user (handleCToPUsers)="handleCToPUsers"></app-user>
+  }
 

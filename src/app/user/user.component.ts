@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core'
+import { Component, EventEmitter, Input, input, Output } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
@@ -12,16 +12,28 @@ export class UserComponent {
   id: string | null = ''
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
-    this.route.params.subscribe((params) => {
-      this.id = params['id']
-      this.name = params['name']
-    })
-  }
   @Input() user: string | null = ''
   @Input() city: string | null = ''
   @Input() reuseUser: string = ''
 
   //reuse components child to parent
-  cToPUser=['Hilary','Mary','Martha','Liz','Nancy','Lily','Jenny','Lily']
+  @Output() getUsers = new EventEmitter<string[]>()
+  cToPUsers = [
+    'Hilary',
+    'Mary',
+    'Martha',
+    'Liz',
+    'Nancy',
+    'Lily',
+    'Jenny',
+    'Lily',
+  ]
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      this.id = params['id']
+      this.name = params['name']
+
+      this.getUsers.emit(this.cToPUsers)
+    })
+  }
 }
