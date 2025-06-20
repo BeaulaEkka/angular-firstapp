@@ -27,6 +27,7 @@ export class UserComponent {
     'Lily',
     'Jenny',
     'Lily',
+    'sample'
   ]
   ngOnInit() {
     this.route.params.subscribe((params) => {
