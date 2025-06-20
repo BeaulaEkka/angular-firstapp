@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, input, Output } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
@@ -27,7 +27,7 @@ export class UserComponent {
     'Lily',
     'Jenny',
     'Lily',
-    'sample'
+    'sample',
   ]
   ngOnInit() {
     this.route.params.subscribe((params) => {
