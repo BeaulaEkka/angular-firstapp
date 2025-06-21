@@ -25,7 +25,6 @@
     </app-user></p> -->
     <!-- <app-user (handleCToPUsers)="handleCToPUsers"></app-user> -->
   }
-<app-user getUser="getUser($event)"></app-user>
+<app-user (getUsers)="handleCToPUsers($event)"></app-user>
   <h1>child to parent</h1>
-  <button (click)="getUsers.emit(this.cToPUsers)">pass data 1</button>
 

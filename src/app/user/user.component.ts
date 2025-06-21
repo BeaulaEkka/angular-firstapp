@@ -17,7 +17,7 @@ export class UserComponent {
   @Input() reuseUser: string = ''
 
   //reuse components child to parent
-  @Output() getUsers = new EventEmitter<string[]>()
+  @Output() getUsers = new EventEmitter();
   cToPUsers = [
     'Hilary',
     'Mary',
