@@ -23,5 +23,6 @@ export class AppComponent {
 
   handleCToPUsers(cToPUsers: string[]) {
     console.log('Received user from child:', cToPUsers)
+    this.cToPUsers = cToPUsers
   }
 }

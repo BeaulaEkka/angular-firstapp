@@ -40,6 +40,6 @@ export class UserComponent {
       this.id = params['id']
       this.name = params['name']
     })
-    this.getUsers.emit(this.cToPUsers)
+    // this.getUsers.emit(this.cToPUsers)
   }
 }
