@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component'
 })
 export class AppComponent {
   user = 'Bruce'
+  cToPUser: any
 
   onUserChange(user: string) {
     this.user = user
@@ -21,6 +22,6 @@ export class AppComponent {
   reuseUsers = ['Peter', 'Bruce', 'Tony', 'Steve', 'Natasha', 'Clint', 'Mary']
 
   handleCToPUsers(cToPUsers: string[]) {
-    console.log(cToPUsers)
+    console.log('Received user from child:', cToPUsers)
   }
 }

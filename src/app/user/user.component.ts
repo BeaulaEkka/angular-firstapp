@@ -30,6 +30,11 @@ export class UserComponent {
     'sample',
   ]
   @Output() getUsers = new EventEmitter()
+
+  sendDataToParent() {
+    const user = { name: 'Alice', city: 'Amsterdam' }
+    this.getUsers.emit(user)
+  }
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.id = params['id']
