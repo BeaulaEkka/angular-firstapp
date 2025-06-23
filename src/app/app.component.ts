@@ -25,4 +25,5 @@ export class AppComponent {
     console.log('Received user from child:', cToPUsers)
     this.cToPUsers = cToPUsers
   }
+  amount = 10
 }
