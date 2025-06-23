@@ -12,7 +12,7 @@ import { UserComponent } from './user/user.component'
 })
 export class AppComponent {
   user = 'Bruce'
-  cToPUser: any
+  cToPUsers: string[] = []
 
   onUserChange(user: string) {
     this.user = user

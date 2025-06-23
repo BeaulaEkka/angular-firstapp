@@ -29,8 +29,15 @@
   <h1>CHILD TO PARENT</h1>
 <app-user (getUsers)="handleCToPUsers($event)"></app-user>
 
-<p>User name is: {{ cToPUser?.name }}</p>
-<p>User's city is: {{ cToPUser?.city }}</p>
+
+
+@for (user of cToPUsers;track user){
+  <ul>
+    <li>{{user}}</li>
+  </ul>
+
+}
+
 
   </div>
 
