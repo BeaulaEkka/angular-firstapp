@@ -3,10 +3,17 @@ import { RouterLink, RouterOutlet } from '@angular/router'
 import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
+import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, ReactiveFormsModule, UserComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    ReactiveFormsModule,
+    UserComponent,
+    CurrencyConverterPipe,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
