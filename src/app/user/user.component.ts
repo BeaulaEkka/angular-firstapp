@@ -17,7 +17,7 @@ export class UserComponent {
   @Input() reuseUser: string = ''
 
   //reuse components child to parent
-  @Output() getUsers = new EventEmitter();
+
   cToPUsers = [
     'Hilary',
     'Mary',
@@ -29,12 +29,12 @@ export class UserComponent {
     'Lily',
     'sample',
   ]
+  @Output() getUsers = new EventEmitter()
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.id = params['id']
       this.name = params['name']
-
-      this.getUsers.emit(this.cToPUsers)
     })
+    this.getUsers.emit(this.cToPUsers)
   }
 }

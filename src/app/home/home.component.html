@@ -7,7 +7,7 @@
   <h1 class="mainTitle">Dynamic Routing</h1>
   <h2>User List</h2>
   <ul>
-    <li *ngFor="let user of users; trackBy: trackById">
+    <li *ngFor="let user of users; trackBy: trackUser">
       <a [routerLink]="['/user', user.id, user.name]">{{ user.name }}</a>
     </li>
   </ul>
