@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
+import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common'
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,9 @@ import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
     ReactiveFormsModule,
     UserComponent,
     CurrencyConverterPipe,
+    DatePipe,
+    CurrencyPipe,
+    UpperCasePipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -33,4 +37,8 @@ export class AppComponent {
     this.cToPUsers = cToPUsers
   }
   amount = 10
+
+  birthday = new Date()
+  price = 123.45
+  name = 'john doe'
 }
