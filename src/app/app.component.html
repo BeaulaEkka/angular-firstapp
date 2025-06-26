@@ -48,9 +48,13 @@
 <p>{{ name | uppercase }}</p>
 
 <!-- Destroy Cycle -->
- <h1 class="mainTitle">Destroy Cycle</h1>
- <h2>{{counter}}</h2>
- <button>Increment</button>
+ <h1 class="mainTitle">Life Cycle: Destroy Cycle</h1>
+ <h2>{{Counter}}</h2>
+ <button (click)="updateCounter()">Increment</button>
+ <div *ngIf="Counter!==5">
+  <h2>User Component</h2>
+  <app-user [Counter]="Counter"></app-user>
+ </div>
 
 
   </div>

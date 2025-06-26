@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
-import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common'
+import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
 
 @Component({
   selector: 'app-root',
@@ -17,6 +17,7 @@ import { CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common'
     DatePipe,
     CurrencyPipe,
     UpperCasePipe,
+    NgIf,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -43,9 +44,9 @@ export class AppComponent {
   name = 'john doe'
 
   //destroy cycle
-  counter = 0
+  Counter = 0
 
   updateCounter() {
-    this.counter++
+    this.Counter++
   }
 }
