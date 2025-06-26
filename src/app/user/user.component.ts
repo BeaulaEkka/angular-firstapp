@@ -11,7 +11,7 @@ export class UserComponent {
   name: string | null = ''
   id: string | null = ''
   constructor(private route: ActivatedRoute) {
-    console.log('constructor')
+    console.log('THis is first step constructor')
     this.name = 'Super Man'
   }
 
@@ -39,10 +39,15 @@ export class UserComponent {
     this.getUsers.emit(user)
   }
   ngOnInit() {
+    console.log('This is second step ngOnInit')
+    this.name = 'nameisngonninit'
     this.route.params.subscribe((params) => {
       this.id = params['id']
       this.name = params['name']
     })
     // this.getUsers.emit(this.cToPUsers)
+  }
+  ngOnDestroy() {
+    console.log('This is third step ngOnDestroy')
   }
 }
