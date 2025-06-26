@@ -44,4 +44,8 @@ export class AppComponent {
 
   //destroy cycle
   counter = 0
+
+  updateCounter() {
+    this.counter++
+  }
 }
