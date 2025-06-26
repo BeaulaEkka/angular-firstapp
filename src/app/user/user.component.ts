@@ -10,7 +10,10 @@ import { ActivatedRoute } from '@angular/router'
 export class UserComponent {
   name: string | null = ''
   id: string | null = ''
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    console.log('constructor')
+    this.name = 'Super Man'
+  }
 
   @Input() user: string | null = ''
   @Input() city: string | null = ''
