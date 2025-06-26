@@ -41,4 +41,7 @@ export class AppComponent {
   birthday = new Date()
   price = 123.45
   name = 'john doe'
+
+  //destroy cycle
+  counter = 0
 }
