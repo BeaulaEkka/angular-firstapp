@@ -1,4 +1,10 @@
-import { Component, Input } from '@angular/core'
+import {
+  afterNextRender,
+  afterRender,
+  Component,
+  Input,
+  ViewChild,
+} from '@angular/core'
 import { RouterLink, RouterOutlet } from '@angular/router'
 import { HeaderComponent } from './header/header.component'
 import { FormControl, ReactiveFormsModule } from '@angular/forms'
@@ -23,9 +29,19 @@ import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  @ViewChild('user') UserComponent!: any
   user = 'Bruce'
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
+
+  constructor() {
+    afterRender(() => {
+      console.log('This is after render', this.UserComponent.Counter)
+    })
+    afterNextRender(() => {
+      console.log('This is after next render')
+    })
+  }
 
   onUserChange(user: string) {
     this.user = user

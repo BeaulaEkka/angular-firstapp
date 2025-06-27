@@ -51,4 +51,8 @@ export class UserComponent {
   ngOnDestroy() {
     console.log('This is third step ngOnDestroy')
   }
+
+  ngOnChanges() {
+    console.log('This is fourth step ngOnChanges')
+  }
 }
