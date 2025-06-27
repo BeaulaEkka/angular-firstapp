@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, EventEmitter, input, Input, Output } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router'
   styleUrl: './user.component.css',
 })
 export class UserComponent {
+  @Input() Counter = 0
   name: string | null = ''
   id: string | null = ''
   constructor(private route: ActivatedRoute) {

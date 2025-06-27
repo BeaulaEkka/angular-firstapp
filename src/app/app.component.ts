@@ -25,6 +25,7 @@ import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
 export class AppComponent {
   user = 'Bruce'
   cToPUsers: string[] = []
+  Counter = 0 //destroy cycle
 
   onUserChange(user: string) {
     this.user = user
@@ -44,7 +45,6 @@ export class AppComponent {
   name = 'john doe'
 
   //destroy cycle
-  Counter = 0
 
   updateCounter() {
     this.Counter++
