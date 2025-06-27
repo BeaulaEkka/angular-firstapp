@@ -29,7 +29,7 @@ import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  @ViewChild('user') UserComponent!: any
+  @ViewChild('user') UserComponent: any
   user = 'Bruce'
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
