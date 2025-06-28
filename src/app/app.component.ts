@@ -78,13 +78,6 @@ export class AppComponent {
   //services
   getProductData() {
     this.productData = this.productService.getProductData()
-    return [
-      { name: 'mobile', price: 1000, company: 'samsung' },
-      { name: 'laptop', price: 1500, company: 'dell' },
-      { name: 'tv', price: 2000, company: 'lg' },
-      { name: 'watch', price: 500, company: 'sony' },
-      { name: 'headphone', price: 100, company: 'boat' },
-      { name: 'speaker', price: 5000, company: 'jbl' },
-    ]
+    console.log(this.productData)
   }
 }

@@ -56,7 +56,11 @@
   <app-user [Counter]="Counter"></app-user>
  </div>
 
- <button>Load ProductData</button>
+ <button (click)="getProductData()">Load Product Data</button>
+
+ @for(item of productData;track item){
+  <h2>{{item.name}}</h2>
+ }
 
 
   </div>
