@@ -34,11 +34,14 @@ export class AppComponent {
   user = 'Bruce'
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
-  productData: {
-    name: string
-    price: number
-    company: string
-  } = {}|undefined;
+
+  productData:
+    | {
+        name: string
+        price: number
+        company: string
+      }[]
+    | undefined
 
   constructor(private productService: ProductService) {
     afterRender(() => {
@@ -74,6 +77,7 @@ export class AppComponent {
 
   //services
   getProductData() {
+    this.productData = this.productService.getProductData()
     return [
       { name: 'mobile', price: 1000, company: 'samsung' },
       { name: 'laptop', price: 1500, company: 'dell' },
