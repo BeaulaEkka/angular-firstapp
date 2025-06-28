@@ -11,6 +11,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms'
 import { UserComponent } from './user/user.component'
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
 import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
+import { ProductService } from './services/product.service'
 
 @Component({
   selector: 'app-root',
@@ -33,8 +34,13 @@ export class AppComponent {
   user = 'Bruce'
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
+  productData: {
+    name: string
+    price: number
+    company: string
+  } = {}|undefined;
 
-  constructor() {
+  constructor(private productService: ProductService) {
     afterRender(() => {
       console.log('This is after render', this.UserComponent.Counter)
     })
@@ -64,5 +70,17 @@ export class AppComponent {
 
   updateCounter() {
     this.Counter++
+  }
+
+  //services
+  getProductData() {
+    return [
+      { name: 'mobile', price: 1000, company: 'samsung' },
+      { name: 'laptop', price: 1500, company: 'dell' },
+      { name: 'tv', price: 2000, company: 'lg' },
+      { name: 'watch', price: 500, company: 'sony' },
+      { name: 'headphone', price: 100, company: 'boat' },
+      { name: 'speaker', price: 5000, company: 'jbl' },
+    ]
   }
 }
