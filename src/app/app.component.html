@@ -65,6 +65,22 @@
 
  <h1 class="mainTitle">API</h1>
 
+ @for(item of productList;track item.id){
+  <ul style="list-style: none;">
+    <li style="list-style: none;display: flex; flex-direction: row;align-items: center;">
+    <img alt="{{item.title}}" src="{{item.thumbnail}}">
+    <ul style="list-style: none;">
+
+    <li style="font-size: x-large; list-style: none;font-weight: bolder;">{{item.title}}</li>
+    <li>{{item.description}}</li>
+    <li><span style="font-weight: bolder;">Weight:</span>  {{item.weight}}kg</li>
+    <li>Rating:{{item.rating}}</li>
+    <li>Brand:{{item.brand}}</li>
+
+  </ul></li></ul>
+
+ }
+
 
   </div>
 

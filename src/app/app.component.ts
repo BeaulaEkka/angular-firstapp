@@ -34,6 +34,7 @@ export class AppComponent {
   user = 'Bruce'
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
+  productList: any
 
   productData:
     | {
@@ -84,8 +85,10 @@ export class AppComponent {
   //API HTTP
   ngOnInit() {
     this.productService.getProductListWithHttp().subscribe((data: any) => {
-      this.productData = data.products
-      console.log(this.productData)
+
+
+      this.productList = data.products
+      console.log('data from ngOnInit', data)
     })
   }
 }
