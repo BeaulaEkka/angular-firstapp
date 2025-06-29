@@ -80,4 +80,12 @@ export class AppComponent {
     this.productData = this.productService.getProductData()
     console.log(this.productData)
   }
+
+  //API HTTP
+  ngOnInit() {
+    this.productService.getProductListWithHttp().subscribe((data: any) => {
+      this.productData = data.products
+      console.log(this.productData)
+    })
+  }
 }
