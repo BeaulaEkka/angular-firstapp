@@ -56,11 +56,14 @@
   <app-user [Counter]="Counter"></app-user>
  </div>
 
+ <h1 class="mainTitle">Procuct service</h1>
  <button (click)="getProductData()">Load Product Data</button>
 
  @for(item of productData;track item){
-  <h2>{{item.name}}</h2>
+  <p>{{item.name}}, {{item.price}}, {{item.company}}</p>
  }
+
+ <h1 class="mainTitle">API</h1>
 
 
   </div>

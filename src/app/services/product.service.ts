@@ -1,11 +1,17 @@
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  constructor() {
+  constructor(private http: HttpClient) {
     console.log('Product Service')
+  }
+  //get Api
+  getProductListWithHttp() {
+    const url = 'https://dummyjson.com/products'
+    return this.http.get(url)
   }
 
   getProductData() {
