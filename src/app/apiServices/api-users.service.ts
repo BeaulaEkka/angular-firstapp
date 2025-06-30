@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiUsersService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getUsers() {
+    const url = 'http://localhost:3000/users'
+
+    return this.http.get(url)
+  }
 }
