@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component'
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
 import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
 import { ProductService } from './services/product.service'
+import { ApiUsersService } from './apiServices/api-users.service'
 
 @Component({
   selector: 'app-root',
@@ -44,7 +45,7 @@ export class AppComponent {
       }[]
     | undefined
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private ApiUsersService: ApiUsersService) {
     afterRender(() => {
       console.log('This is after render', this.UserComponent.Counter)
     })
@@ -85,8 +86,6 @@ export class AppComponent {
   //API HTTP
   ngOnInit() {
     this.productService.getProductListWithHttp().subscribe((data: any) => {
-
-
       this.productList = data.products
       console.log('data from ngOnInit', data)
     })
