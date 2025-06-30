@@ -84,7 +84,11 @@
  <h1>Json Server</h1>
  <p>run json server through json server cli</p>
 
- 
+ @for (user of jsonServerUsers ;track user.id){
+  <ul>
+    <li>{{user.name}}</li>
+  </ul>
+ }
 
 
   </div>

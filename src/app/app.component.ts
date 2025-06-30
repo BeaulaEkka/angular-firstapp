@@ -36,6 +36,7 @@ export class AppComponent {
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
   productList: any
+  jsonServerUsers: any
 
   productData:
     | {
@@ -45,7 +46,10 @@ export class AppComponent {
       }[]
     | undefined
 
-  constructor(private productService: ProductService, private ApiUsersService: ApiUsersService) {
+  constructor(
+    private productService: ProductService,
+    private ApiUsersService: ApiUsersService
+  ) {
     afterRender(() => {
       console.log('This is after render', this.UserComponent.Counter)
     })
@@ -88,6 +92,10 @@ export class AppComponent {
     this.productService.getProductListWithHttp().subscribe((data: any) => {
       this.productList = data.products
       console.log('data from ngOnInit', data)
-    })
+    }),
+      this.ApiUsersService.getUsers().subscribe((data: any) => {
+        console.log('data from ngOnInit for apiuserservice', data)
+        this.jsonServerUsers = data
+      })
   }
 }
