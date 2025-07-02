@@ -7,7 +7,12 @@ import {
 } from '@angular/core'
 import { RouterLink, RouterOutlet } from '@angular/router'
 import { HeaderComponent } from './header/header.component'
-import { FormControl, ReactiveFormsModule } from '@angular/forms'
+import {
+  FormControl,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+} from '@angular/forms'
 import { UserComponent } from './user/user.component'
 import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
 import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
@@ -27,6 +32,7 @@ import { JsonServerUser } from './interfaces/JsonServerUser'
     CurrencyPipe,
     UpperCasePipe,
     NgIf,
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -98,5 +104,10 @@ export class AppComponent {
         console.log('data from ngOnInit for apiuserservice', data)
         this.jsonServerUsers = data
       })
+  }
+
+  ///forms
+  addUser(jsonServerUser: JsonServerUser) {
+    console.log('userForm JsonServerUser:', jsonServerUser)
   }
 }

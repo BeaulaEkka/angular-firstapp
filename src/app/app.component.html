@@ -81,7 +81,7 @@
 
  }
 
- <h1>Json Server</h1>
+ <h1  class="mainTitle">Json Server</h1>
  <p>run json server through json server cli</p>
 
  @for (user of jsonServerUsers ;track user.id){
@@ -91,6 +91,16 @@
     <li>{{user.age}}</li>
   </ul>
  }
+
+ <h1  class="mainTitle">Post Api in Angular</h1>
+<h2>Form</h2>
+<form action="" #userForm="ngForm" (ngSubmit)="addUser(userForm.value)"> <br>
+  <input type="text" ngModel placeholder="Enter Name" name="name" > <br> <br>
+  <input type="text" ngModel placeholder="Enter Email" name="email"> <br> <br>
+  <input type="text" ngModel placeholder="Enter Age" name="age">
+  <br> <br>
+  <button type="button">Add User</button>
+  </form>
 
 
   </div>

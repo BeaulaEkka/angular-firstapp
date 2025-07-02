@@ -1,5 +1,5 @@
 export interface JsonServerUser {
-  // id: number;
+  id: number;
   name: string
   age: string
   email: string
