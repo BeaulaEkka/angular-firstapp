@@ -10,8 +10,7 @@ export class ApiUsersService {
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<JsonServerUser[]> {
-    const url = 'http://localhost:3000/users';
-
-    return this.http.get<JsonServerUser>(url)
+    const url = 'http://localhost:3000/users'
+    return this.http.get<JsonServerUser[]>(url)
   }
 }

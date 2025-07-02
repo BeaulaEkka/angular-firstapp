@@ -13,6 +13,7 @@ import { CurrencyConverterPipe } from './pipe/currency-converter.pipe'
 import { CurrencyPipe, DatePipe, NgIf, UpperCasePipe } from '@angular/common'
 import { ProductService } from './services/product.service'
 import { ApiUsersService } from './apiServices/api-users.service'
+import { JsonServerUser } from './interfaces/JsonServerUser'
 
 @Component({
   selector: 'app-root',
@@ -36,7 +37,7 @@ export class AppComponent {
   cToPUsers: string[] = []
   Counter = 0 //destroy cycle
   productList: any
-  jsonServerUsers: any
+  jsonServerUsers: JsonServerUser[] = []
 
   productData:
     | {
@@ -93,7 +94,7 @@ export class AppComponent {
       this.productList = data.products
       console.log('data from ngOnInit', data)
     }),
-      this.ApiUsersService.getUsers().subscribe((data: any) => {
+      this.ApiUsersService.getUsers().subscribe((data: JsonServerUser[]) => {
         console.log('data from ngOnInit for apiuserservice', data)
         this.jsonServerUsers = data
       })
