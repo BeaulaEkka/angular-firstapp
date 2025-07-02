@@ -94,12 +94,12 @@
 
  <h1  class="mainTitle">Post Api in Angular</h1>
 <h2>Form</h2>
-<form action="" #userForm="ngForm" (ngSubmit)="addUser(userForm.value)"> <br>
-  <input type="text" ngModel placeholder="Enter Name" name="name" > <br> <br>
-  <input type="text" ngModel placeholder="Enter Email" name="email"> <br> <br>
-  <input type="text" ngModel placeholder="Enter Age" name="age">
+<form  #userForm="ngForm" (ngSubmit)="addUser(userForm.value)"> <br>
+  <input type="text"  placeholder="Enter Name" name="name" ngModel > <br> <br>
+  <input type="text"  placeholder="Enter Email" name="email" ngModel> <br> <br>
+  <input type="text"  placeholder="Enter Age" name="age" ngModel>
   <br> <br>
-  <button type="button">Add User</button>
+  <button type="submit">Add User</button>
   </form>
 
 
