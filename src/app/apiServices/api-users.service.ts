@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
+
 import { JsonServerUser } from '../interfaces/JsonServerUser'
+import { Observable } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
@@ -14,8 +15,8 @@ export class ApiUsersService {
     return this.http.get<JsonServerUser[]>(url)
   }
 
-  saveUsers(jsonServerUser:JsonServerUser): Observable<JsonServerUser> {
+  saveUsers(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
     const url = 'http://localhost:3000/users'
-    return this.http.post<JsonServerUser>(url )
+    return this.http.post<JsonServerUser>(url, jsonServerUser)
   }
 }
