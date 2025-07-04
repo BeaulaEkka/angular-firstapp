@@ -118,6 +118,9 @@ export class AppComponent {
     this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
       (data: JsonServerUser) => {
         console.log('userForm JsonServerUser:', jsonServerUser)
+        if (data) {
+          this.getUser()
+        }
       }
     )
   }
@@ -125,6 +128,9 @@ export class AppComponent {
   deleteUser(id: string) {
     this.ApiUsersService.deleteUser(id).subscribe((data: JsonServerUser) => {
       console.log('data', data)
+      if (data) {
+        this.getUser()
+      }
     })
   }
 }
