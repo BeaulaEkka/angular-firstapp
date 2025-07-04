@@ -8,11 +8,12 @@ import { Observable } from 'rxjs'
   providedIn: 'root',
 })
 export class ApiUsersService {
+  url = 'http://localhost:3000/users'
+
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<JsonServerUser[]> {
-    const url = 'http://localhost:3000/users'
-    return this.http.get<JsonServerUser[]>(url)
+    return this.http.get<JsonServerUser[]>(this.url)
   }
 
   // saveUsers(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
@@ -21,7 +22,10 @@ export class ApiUsersService {
   // }
 
   saveUsers(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
-    const url = 'http://localhost:3000/users'
-    return this.http.post<JsonServerUser>(url, jsonServerUser)
+    return this.http.post<JsonServerUser>(this.url, jsonServerUser)
+  }
+
+  deleteUser(id: string): Observable<JsonServerUser> {
+    return this.http.delete<JsonServerUser>(`this.url/${id}`)
   }
 }

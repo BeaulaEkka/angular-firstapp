@@ -123,6 +123,8 @@ export class AppComponent {
   }
 
   deleteUser(id: string) {
-    console.log('delete user:id', id)
+    this.ApiUsersService.deleteUser(id).subscribe((data: JsonServerUser) => {
+      console.log('data', data)
+    })
   }
 }
