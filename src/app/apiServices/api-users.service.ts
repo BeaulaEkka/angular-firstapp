@@ -15,6 +15,11 @@ export class ApiUsersService {
     return this.http.get<JsonServerUser[]>(url)
   }
 
+  // saveUsers(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
+  //   const url = 'http://localhost:3000/users'
+  //   return this.http.post<JsonServerUser>(url, jsonServerUser)
+  // }
+
   saveUsers(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
     const url = 'http://localhost:3000/users'
     return this.http.post<JsonServerUser>(url, jsonServerUser)

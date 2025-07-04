@@ -103,11 +103,22 @@ export class AppComponent {
       this.ApiUsersService.getUsers().subscribe((data: JsonServerUser[]) => {
         console.log('data from ngOnInit for apiuserservice', data)
         this.jsonServerUsers = data
-      })
+      }),
+      this.getUser()
+  }
+  ///forms
+  getUser() {
+    this.ApiUsersService.getUsers().subscribe((data: JsonServerUser[]) => {
+      console.log('data from ngOnInit for apiuserservice', data)
+      this.jsonServerUsers = data
+    })
   }
 
-  ///forms
   addUser(jsonServerUser: JsonServerUser) {
-    console.log('userForm JsonServerUser:', jsonServerUser)
+    this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
+      (data: JsonServerUser) => {
+        console.log('userForm JsonServerUser:', jsonServerUser)
+      }
+    )
   }
 }
