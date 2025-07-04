@@ -121,4 +121,8 @@ export class AppComponent {
       }
     )
   }
+
+  deleteUser(id: string) {
+    console.log('delete user:id', id)
+  }
 }
