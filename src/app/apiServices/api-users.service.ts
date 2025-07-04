@@ -28,4 +28,11 @@ export class ApiUsersService {
   deleteUser(id: string): Observable<JsonServerUser> {
     return this.http.delete<JsonServerUser>(`${this.url}/${id}`)
   }
+
+  updateUser(jsonServerUser: JsonServerUser): Observable<JsonServerUser> {
+    return this.http.put<JsonServerUser>(
+      `${this.url}/${jsonServerUser.id}`,
+      jsonServerUser
+    )
+  }
 }

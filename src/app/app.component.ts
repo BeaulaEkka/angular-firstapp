@@ -133,4 +133,15 @@ export class AppComponent {
       }
     })
   }
+
+  updateUser(jsonServerUser: JsonServerUser) {
+    this.ApiUsersService.updateUser(jsonServerUser).subscribe(
+      (data: JsonServerUser) => {
+        console.log('data', data)
+        if (data) {
+          this.getUser()
+        }
+      }
+    )
+  }
 }
