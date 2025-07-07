@@ -135,6 +135,13 @@ export class AppComponent {
   }
 
   selectUser(id: string) {
-    console.log('select user', id)
+    this.ApiUsersService.getSelectedUser(id).subscribe(
+      (data: JsonServerUser) => {
+        console.log('data selectUser', data)
+        if (data) {
+          this.getUser()
+        }
+      }
+    )
   }
 }
