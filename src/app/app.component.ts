@@ -44,6 +44,7 @@ export class AppComponent {
   Counter = 0 //destroy cycle
   productList: any
   jsonServerUsers: JsonServerUser[] = []
+  selectedUser: JsonServerUser | undefined
 
   productData:
     | {
@@ -137,10 +138,8 @@ export class AppComponent {
   selectUser(id: string) {
     this.ApiUsersService.getSelectedUser(id).subscribe(
       (data: JsonServerUser) => {
-        console.log('data selectUser', data)
-        if (data) {
-          this.getUser()
-        }
+        console.log('data', data)
+        this.selectedUser = data
       }
     )
   }
