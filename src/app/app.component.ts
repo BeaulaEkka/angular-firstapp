@@ -134,14 +134,7 @@ export class AppComponent {
     })
   }
 
-  // selectUser(id) {
-  //   this.ApiUsersService.updateUser(jsonServerUser).subscribe(
-  //     (data: JsonServerUser) => {
-  //       console.log('data', data)
-  //       if (data) {
-  //         this.getUser()
-  //       }
-  //     }
-  //   )
-  // }
+  selectUser(id: string) {
+    console.log('select user', id)
+  }
 }
