@@ -116,14 +116,25 @@ export class AppComponent {
   }
 
   addUser(jsonServerUser: JsonServerUser) {
-    this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
-      (data: JsonServerUser) => {
-        console.log('userForm JsonServerUser:', jsonServerUser)
-        if (data) {
-          this.getUser()
+    if (!this.selectedUser) {
+      this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
+        (data: JsonServerUser) => {
+          console.log('userForm JsonServerUser:', jsonServerUser)
+          if (data) {
+            this.getUser()
+          }
         }
-      }
-    )
+      )
+    } else {
+      this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
+        (data: JsonServerUser) => {
+          console.log('userForm JsonServerUser updater:', jsonServerUser)
+          if (data) {
+            this.getUser()
+          }
+        }
+      )
+    }
   }
 
   deleteUser(id: string) {
