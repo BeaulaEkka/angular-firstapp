@@ -126,7 +126,8 @@ export class AppComponent {
         }
       )
     } else {
-      this.ApiUsersService.saveUsers(jsonServerUser).subscribe(
+      const userData={...jsonServerUser, id: this.selectedUser.id}
+      this.ApiUsersService.updateUser(jsonServerUser).subscribe(
         (data: JsonServerUser) => {
           console.log('userForm JsonServerUser updater:', jsonServerUser)
           if (data) {
